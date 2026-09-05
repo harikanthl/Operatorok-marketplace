@@ -2340,6 +2340,84 @@
       "sha": "32a261b6b2437464aca7e51bf9b48bcac1e2835c",
       "version": "1.3.0"
     },
+    "operator-browser": {
+      "components": {
+        "skills": [
+          {
+            "description": "Clip a captured web page or selection into the person's notes as a clean, cited entry with source, date, tags and the p…",
+            "files": [],
+            "hasBody": true,
+            "name": "browser-clip-to-notes",
+            "path": "browser-clip-to-notes"
+          },
+          {
+            "description": "Check the claims in a captured page or a highlighted passage against primary sources, and report each as supported, con…",
+            "files": [],
+            "hasBody": true,
+            "name": "browser-fact-check",
+            "path": "browser-fact-check"
+          },
+          {
+            "description": "Prepare the answers for a captured web form (application, registration, quote request, government portal) from the pers…",
+            "files": [],
+            "hasBody": true,
+            "name": "browser-fill-form",
+            "path": "browser-fill-form"
+          },
+          {
+            "description": "Turn a captured profile, company page or listing (LinkedIn, a team page, a directory, a property listing) into a clean…",
+            "files": [],
+            "hasBody": true,
+            "name": "browser-lead-to-crm",
+            "path": "browser-lead-to-crm"
+          },
+          {
+            "description": "From a captured product page, extract the product and price, compare it across other retailers, say whether to buy now,…",
+            "files": [],
+            "hasBody": true,
+            "name": "browser-price-watch",
+            "path": "browser-price-watch"
+          },
+          {
+            "description": "Extract the recipe from a captured page (ingredients with quantities, steps, times, yield) without the life story, scal…",
+            "files": [],
+            "hasBody": true,
+            "name": "browser-recipe-clipper",
+            "path": "browser-recipe-clipper"
+          },
+          {
+            "description": "Draft a reply to what is on the captured page (an email thread, a message, a comment, a review, a support ticket, a pos…",
+            "files": [],
+            "hasBody": true,
+            "name": "browser-reply-draft",
+            "path": "browser-reply-draft"
+          },
+          {
+            "description": "Read the reviews on a captured product, app, restaurant or service page, separate the recurring complaints from the pra…",
+            "files": [],
+            "hasBody": true,
+            "name": "browser-reviews-verdict",
+            "path": "browser-reviews-verdict"
+          },
+          {
+            "description": "Summarize a captured web page in the shape the person needs (the gist, the argument, the numbers, the steps), answer th…",
+            "files": [],
+            "hasBody": true,
+            "name": "browser-summarize-page",
+            "path": "browser-summarize-page"
+          },
+          {
+            "description": "Translate a captured page or a highlighted passage faithfully into the person's language, keeping structure, numbers, n…",
+            "files": [],
+            "hasBody": true,
+            "name": "browser-translate-page",
+            "path": "browser-translate-page"
+          }
+        ]
+      },
+      "license": "MIT",
+      "version": "1.0.0"
+    },
     "operator-engineering": {
       "components": {
         "skills": [
@@ -2356,6 +2434,84 @@
             "hasBody": true,
             "name": "security-review",
             "path": "security-review"
+          }
+        ]
+      },
+      "license": "MIT",
+      "version": "1.0.0"
+    },
+    "operator-glasses": {
+      "components": {
+        "skills": [
+          {
+            "description": "Describe what is in front of a person who cannot see it well, from a glasses photo, in the order that matters for actin…",
+            "files": [],
+            "hasBody": true,
+            "name": "glasses-describe-scene",
+            "path": "glasses-describe-scene"
+          },
+          {
+            "description": "Guide a technician through a repair or procedure one step at a time from glasses photos and clips of the equipment, wit…",
+            "files": [],
+            "hasBody": true,
+            "name": "glasses-field-repair-guide",
+            "path": "glasses-field-repair-guide"
+          },
+          {
+            "description": "From glasses photos of a fridge, pantry or shopping basket, list what is there, propose meals that use it, and produce…",
+            "files": [],
+            "hasBody": true,
+            "name": "glasses-fridge-to-recipe",
+            "path": "glasses-fridge-to-recipe"
+          },
+          {
+            "description": "Turn audio and clips captured by glasses during a conversation, site meeting or lecture into notes, decisions, action i…",
+            "files": [],
+            "hasBody": true,
+            "name": "glasses-meeting-notes",
+            "path": "glasses-meeting-notes"
+          },
+          {
+            "description": "Identify a product from a glasses photo (shelf tag, box, barcode, label), find its price elsewhere, and say whether to…",
+            "files": [],
+            "hasBody": true,
+            "name": "glasses-price-check",
+            "path": "glasses-price-check"
+          },
+          {
+            "description": "Turn glasses photos of receipts, invoices and price tags into expense lines with vendor, date, total, tax and category,…",
+            "files": [],
+            "hasBody": true,
+            "name": "glasses-receipts-to-expenses",
+            "path": "glasses-receipts-to-expenses"
+          },
+          {
+            "description": "Turn \"remember where I parked / put this\" photos from smart glasses into a findable memory, and answer \"where did I lea…",
+            "files": [],
+            "hasBody": true,
+            "name": "glasses-remember-where",
+            "path": "glasses-remember-where"
+          },
+          {
+            "description": "Turn a hands-free site walk (glasses photos and clips of rooms, equipment, defects, meters) into a structured inspectio…",
+            "files": [],
+            "hasBody": true,
+            "name": "glasses-site-inspection",
+            "path": "glasses-site-inspection"
+          },
+          {
+            "description": "Translate the text in front of the person's eyes, from a glasses photo of a sign, menu, label, form or page, into their…",
+            "files": [],
+            "hasBody": true,
+            "name": "glasses-translate-in-view",
+            "path": "glasses-translate-in-view"
+          },
+          {
+            "description": "Turn glasses photos of whiteboards, flip charts, sticky-note walls, slides and business cards into clean notes, diagram…",
+            "files": [],
+            "hasBody": true,
+            "name": "glasses-whiteboard-to-notes",
+            "path": "glasses-whiteboard-to-notes"
           }
         ]
       },

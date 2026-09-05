@@ -1,0 +1,9 @@
+{
+  "name": "operator-glasses",
+  "version": "1.0.0",
+  "description": "Ten skills for smart-glasses capture (Mentra Live, Meta glasses): what a bot does with the photos, clips and audio a person captures hands-free, and how it talks back through a speaker or the phone.",
+  "author": { "name": "Operator", "url": "https://operatorok.com" },
+  "homepage": "https://operatorok.com/plugin/operator-glasses",
+  "license": "MIT",
+  "keywords": ["smart glasses", "mentra", "meta glasses", "capture", "field", "hands-free", "vision"]
+}

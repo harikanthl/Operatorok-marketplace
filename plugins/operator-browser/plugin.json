@@ -1,0 +1,9 @@
+{
+  "name": "operator-browser",
+  "version": "1.0.0",
+  "description": "Ten skills for browser capture (the Operator Safari extension): what a bot does with a page, a highlighted selection and a note a person sends from the browser, without ever acting on the page itself.",
+  "author": { "name": "Operator", "url": "https://operatorok.com" },
+  "homepage": "https://operatorok.com/plugin/operator-browser",
+  "license": "MIT",
+  "keywords": ["browser", "safari extension", "web capture", "clip", "summarize", "price tracking", "research"]
+}

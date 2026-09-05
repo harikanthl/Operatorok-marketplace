@@ -44,6 +44,22 @@
       "keywords": ["electrical", "electrician", "trade", "nec"]
     },
     {
+      "name": "operator-glasses",
+      "description": "Ten skills for smart-glasses capture: remember where you parked, translate what is in view, fridge to recipe, aisle price check, field repair guidance, site inspection reports, meeting notes from the mic, scene description for low vision, receipts to expenses, whiteboard to notes. Each names the optional integrations it works with.",
+      "category": "glasses",
+      "source": { "source": "local", "path": "./plugins/operator-glasses" },
+      "homepage": "https://operatorok.com/plugin/operator-glasses",
+      "keywords": ["smart glasses", "mentra", "meta glasses", "hands-free", "field", "capture", "vision"]
+    },
+    {
+      "name": "operator-browser",
+      "description": "Ten skills for browser capture: summarize a page, clip to notes with citations, price watch, prepare a form, fact-check, draft a reply, reviews verdict, recipe clipper, lead to CRM, translate a page. None of them act on the page; the person does.",
+      "category": "browser",
+      "source": { "source": "local", "path": "./plugins/operator-browser" },
+      "homepage": "https://operatorok.com/plugin/operator-browser",
+      "keywords": ["browser", "safari extension", "clip", "summarize", "price tracking", "fact check", "crm"]
+    },
+    {
       "name": "operator-mac-bots",
       "description": "Seven Mac teammates: Mac Housekeeping, Mac Doctor, Network, Security Check, Updates, Backup and Local Models. Each reads first, never sudo, and reports before it changes anything.",
       "category": "bots",
