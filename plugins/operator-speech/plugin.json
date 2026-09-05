@@ -1,0 +1,9 @@
+{
+  "name": "operator-speech",
+  "version": "1.0.0",
+  "description": "Transcribe audio and video: the host's speech.stt capability first (on-device on the Mac, or the person's ElevenLabs, Gemini or OpenAI key by policy), WhisperX in the worker when the host cannot.",
+  "author": { "name": "Operator", "url": "https://operatorok.com" },
+  "homepage": "https://operatorok.com/plugin/operator-speech",
+  "license": "MIT",
+  "keywords": ["transcription", "speech to text", "whisper", "whisperx", "diarization", "scribe"]
+}

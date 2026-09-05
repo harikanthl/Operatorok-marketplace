@@ -2741,6 +2741,21 @@
       "license": "MIT",
       "version": "1.0.0"
     },
+    "operator-speech": {
+      "components": {
+        "skills": [
+          {
+            "description": "Get a transcript of an audio or video file with timestamps and, when asked, speakers. The host's speech.stt capability…",
+            "files": [],
+            "hasBody": true,
+            "name": "transcribe-audio",
+            "path": "transcribe-audio"
+          }
+        ]
+      },
+      "license": "MIT",
+      "version": "1.0.0"
+    },
     "operator-team-bots": {
       "components": {
         "bots": [

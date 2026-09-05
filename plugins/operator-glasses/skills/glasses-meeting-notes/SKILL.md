@@ -16,9 +16,15 @@ floor, a client on site: the notes get written by nobody. Write them.
 ## What you receive
 
 - Clips (video with audio) or audio files in `/app/inbox` with the `_collection.json` sidecar. If a
-  transcript file (`.txt`, `.srt`, `.json`) is beside a clip, use it; otherwise transcribe the audio
-  with the tools the worker has (`ffmpeg` to extract audio, then a local or provided speech model).
-  If nothing can transcribe, say so and stop: notes from guessed speech are worse than none.
+  transcript file (`.txt`, `.srt`, `.json`) is beside a clip, use it. Otherwise ask the host to
+  transcribe: POST to `OPERATOR_CAPABILITY_URL` with header `Authorization: Bearer $OPERATOR_INGEST_TOKEN`
+  and body `{"capability": "speech.stt", "policy": "balanced", "prompt": "Transcribe this clip and say
+  who said what", "mediaPaths": ["/app/inbox/<clip>"]}`, one clip per call. The reply's `text` is JSON:
+  `{"text", "language", "segments": [{"start", "end", "speaker", "text"}], "diarized", "provider", "model"}`.
+  The host transcribes on the Mac itself unless the person's policy and keys allow a cloud model; the
+  `provider` field says which, and you name it in the notes. If the capability is absent and the
+  `transcribe-audio` skill's local tools are not in this worker either, say so and stop: notes from
+  guessed speech are worse than none.
 - The job prompt may name the people present, the purpose, and the person's own name so "I will"
   can be attributed.
 - Video frames matter when a person points at something: read them via `OPERATOR_CAPABILITY_URL`

@@ -60,6 +60,14 @@
       "keywords": ["browser", "safari extension", "clip", "summarize", "price tracking", "fact check", "crm"]
     },
     {
+      "name": "operator-speech",
+      "description": "Transcribe audio and video: the host's speech.stt capability first (on-device on the Mac, or the person's ElevenLabs, Gemini or OpenAI key by policy), WhisperX in the worker when the host cannot. Every transcript says who produced it.",
+      "category": "media",
+      "source": { "source": "local", "path": "./plugins/operator-speech" },
+      "homepage": "https://operatorok.com/plugin/operator-speech",
+      "keywords": ["transcription", "speech to text", "whisper", "whisperx", "diarization", "scribe"]
+    },
+    {
       "name": "operator-mac-bots",
       "description": "Seven Mac teammates: Mac Housekeeping, Mac Doctor, Network, Security Check, Updates, Backup and Local Models. Each reads first, never sudo, and reports before it changes anything.",
       "category": "bots",
