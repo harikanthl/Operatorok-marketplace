@@ -1,0 +1,73 @@
+{
+  "id": "mac-security",
+  "name": "Security Check",
+  "tagline": "A report on this Mac's security posture, and only a report.",
+  "blurb": "Reads FileVault, the firewall, Gatekeeper, System Integrity Protection, your login and background items and your SSH keys, then says whether the posture is sound. It changes nothing, on purpose: a security setting a bot can flip is worse than one it merely names. Where something is off, it says what that setting protects and which Settings pane turns it back on.",
+  "symbol": "lock.shield",
+  "accent": "#8B5CF6",
+  "featured": false,
+  "industries": [],
+  "operations": [
+    "operations"
+  ],
+  "capabilities": [
+    "FileVault, firewall, Gatekeeper, SIP",
+    "Login and background items",
+    "Changes nothing, ever",
+    "Runs on this Mac"
+  ],
+  "requirements": [
+    "Mac"
+  ],
+  "bot": {
+    "color": "violet",
+    "agent": "claude",
+    "helpsWith": "Says whether this Mac's security posture is sound, and names what is off without changing it."
+  },
+  "recommendedFor": [
+    "mac-health"
+  ],
+  "jobs": [
+    {
+      "id": "chat",
+      "name": "Chat",
+      "symbol": "bubble.left.and.text.bubble.right",
+      "recipeID": "general",
+      "contractID": "bot-chat@1"
+    },
+    {
+      "id": "security-check",
+      "name": "Security check",
+      "symbol": "lock.shield",
+      "recipeID": "general",
+      "prompt": "Report this Mac's security posture. This job is A REPORT AND ONLY A REPORT: change nothing, turn nothing on or off, and never run sudo. A security setting that a bot changes is worse than one it merely names.\n\nGather:\n- `fdesetup status` for FileVault\n- `/usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate` and `--getstealthmode` for the firewall. Both read fine without sudo.\n- `spctl --status` for Gatekeeper\n- `csrutil status` for System Integrity Protection\n- `sfltool dumpbtm` for login and background items. This works without sudo. Its output is long, so summarise by application and name anything you cannot attribute.\n- `ls -la ~/.ssh` for private keys: report each key's name and age. NEVER read a key's contents.\n- `security find-certificate -a -p /Library/Keychains/System.keychain | openssl x509 -noout -enddate` where it helps, for certificates that have already expired\n\nWHAT THE ANSWERS MEAN:\n- FileVault `On`, SIP `enabled`, Gatekeeper `assessments enabled`, firewall `State = 1`: that is the expected posture. Say so in one line rather than four.\n- Anything OFF gets its own line saying what it protects and which Settings pane turns it back on. Name the pane. Do not offer to do it yourself.\n- A background item you cannot attribute to something the person installed is the finding worth raising. Most of them are legitimate, so do not list all forty.\n- An SSH key with no passphrase is not something you can detect without reading it. Do not guess, and do not read it.\n\nWrite the report to ./outbox/security-report.md and answer in chat. If the posture is sound, say that in the first sentence.",
+      "needsRepo": false,
+      "connectorIDs": [],
+      "saysLike": [
+        "secure",
+        "safe",
+        "firewall",
+        "filevault",
+        "gatekeeper",
+        "sip",
+        "ssh",
+        "keys",
+        "login items",
+        "background items",
+        "posture"
+      ],
+      "contractID": "mac-security@1",
+      "capabilities": [
+        "Reads the posture, changes nothing",
+        "Names the pane, not the fix",
+        "Never reads a key's contents"
+      ]
+    }
+  ],
+  "connectorIDs": [],
+  "skillIDs": [
+    "mac-instruments",
+    "clear-replies"
+  ],
+  "mcpServerIDs": []
+}

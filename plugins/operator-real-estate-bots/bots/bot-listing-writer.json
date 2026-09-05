@@ -1,0 +1,38 @@
+{
+  "id": "bot-listing-writer",
+  "name": "Listing Writer",
+  "tagline": "Turn your notes on a property into a listing worth reading.",
+  "blurb": "Tell it about the property the way you would tell a colleague — what is good, what needs saying carefully, who it is for. It writes the listing, and rewrites it when the feedback comes back.",
+  "symbol": "text.badge.star",
+  "accent": "#F08A24",
+  "industries": [
+    "real-estate"
+  ],
+  "bot": {
+    "color": "orange",
+    "agent": "claude",
+    "helpsWith": "Writes and refreshes listings from your notes on a property."
+  },
+  "recommendedFor": [
+    "real-estate-crm"
+  ],
+  "jobs": [
+    {
+      "id": "chat",
+      "name": "Chat",
+      "symbol": "bubble.left.and.text.bubble.right",
+      "recipeID": "general",
+      "contractID": "bot-chat@1"
+    },
+    {
+      "id": "write",
+      "name": "Write the listing",
+      "symbol": "square.and.pencil",
+      "recipeID": "general",
+      "contractID": "listing-writer@1"
+    }
+  ],
+  "connectorIDs": [],
+  "skillIDs": [],
+  "mcpServerIDs": []
+}

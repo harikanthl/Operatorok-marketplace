@@ -1,0 +1,4 @@
+# Fetched remote sources (scripts/plugin_catalog.py)
+.cache/
+__pycache__/
+.DS_Store

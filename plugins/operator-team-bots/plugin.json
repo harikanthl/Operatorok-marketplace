@@ -1,0 +1,15 @@
+{
+  "name": "operator-team-bots",
+  "version": "1.0.0",
+  "description": "Operator bot templates: Review Team, Startup Crew",
+  "author": {
+    "name": "Operator",
+    "url": "https://operatorok.com"
+  },
+  "homepage": "https://operatorok.com",
+  "license": "MIT",
+  "keywords": [
+    "bot-review-team",
+    "bot-startup-crew"
+  ]
+}

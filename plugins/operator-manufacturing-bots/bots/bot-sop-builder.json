@@ -1,0 +1,38 @@
+{
+  "id": "bot-sop-builder",
+  "name": "SOP Builder",
+  "tagline": "Say how you do it. Get something the next person can follow.",
+  "blurb": "Talk it through a setup, or hand it a recording. It writes the numbered steps, the verification checklist and the tool list — and asks about the parts you skipped over.",
+  "symbol": "list.number",
+  "accent": "#86B81B",
+  "industries": [
+    "manufacturing"
+  ],
+  "bot": {
+    "color": "citron",
+    "agent": "claude",
+    "helpsWith": "Turns how you actually do it into an SOP the next person can follow."
+  },
+  "recommendedFor": [
+    "machine-shop"
+  ],
+  "jobs": [
+    {
+      "id": "chat",
+      "name": "Chat",
+      "symbol": "bubble.left.and.text.bubble.right",
+      "recipeID": "general",
+      "contractID": "bot-chat@1"
+    },
+    {
+      "id": "sop",
+      "name": "Generate SOP",
+      "symbol": "list.number",
+      "recipeID": "document-analysis",
+      "contractID": "generate-sop@1"
+    }
+  ],
+  "connectorIDs": [],
+  "skillIDs": [],
+  "mcpServerIDs": []
+}

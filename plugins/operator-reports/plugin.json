@@ -1,0 +1,16 @@
+{
+  "name": "operator-reports",
+  "version": "1.0.0",
+  "description": "Operator report and reply skills",
+  "author": {
+    "name": "Operator",
+    "url": "https://operatorok.com"
+  },
+  "homepage": "https://operatorok.com",
+  "license": "MIT",
+  "keywords": [
+    "clear-replies",
+    "structured-report",
+    "visual-report"
+  ]
+}

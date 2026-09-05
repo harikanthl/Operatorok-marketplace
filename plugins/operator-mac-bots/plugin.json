@@ -1,0 +1,20 @@
+{
+  "name": "operator-mac-bots",
+  "version": "1.0.0",
+  "description": "Operator bot templates: Mac Housekeeping, Mac Doctor, Network, Security Check, Updates, Backup, Local Models",
+  "author": {
+    "name": "Operator",
+    "url": "https://operatorok.com"
+  },
+  "homepage": "https://operatorok.com",
+  "license": "MIT",
+  "keywords": [
+    "mac-housekeeping",
+    "mac-health",
+    "mac-network",
+    "mac-security",
+    "mac-updates",
+    "mac-backup",
+    "local-models"
+  ]
+}

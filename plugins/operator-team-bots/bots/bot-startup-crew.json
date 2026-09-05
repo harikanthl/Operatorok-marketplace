@@ -1,0 +1,43 @@
+{
+  "id": "bot-startup-crew",
+  "name": "Startup Crew",
+  "tagline": "Describe the app. The crew builds the smallest thing that runs.",
+  "blurb": "A lead who picks the stack, writes the scaffold and names the API shapes, and members who build behind those seams. Talk to it about what you want; when it is clear enough, it opens a session and the crew ships something you can start.",
+  "symbol": "hammer",
+  "accent": "#3ECF8E",
+  "operations": [
+    "engineering"
+  ],
+  "capabilities": [
+    "Stack decided once, written down",
+    "Members build behind agreed seams",
+    "The lead assembles and runs it"
+  ],
+  "bot": {
+    "color": "emeraude",
+    "agent": "claude",
+    "helpsWith": "Builds a working app with a crew — scaffold, features, and how to run it."
+  },
+  "recommendedFor": [
+    "software-engineering"
+  ],
+  "jobs": [
+    {
+      "id": "chat",
+      "name": "Chat",
+      "symbol": "bubble.left.and.text.bubble.right",
+      "recipeID": "general",
+      "contractID": "bot-chat@1"
+    },
+    {
+      "id": "build",
+      "name": "Build the app",
+      "symbol": "shippingbox",
+      "recipeID": "software-engineering",
+      "contractID": "build-app@1"
+    }
+  ],
+  "connectorIDs": [],
+  "skillIDs": [],
+  "mcpServerIDs": []
+}

@@ -1,0 +1,42 @@
+{
+  "id": "bot-follow-up",
+  "name": "Follow-up Agent",
+  "tagline": "Knows who has gone quiet, and what to say to them.",
+  "blurb": "Ask it who is worth a call today. It drafts the next touch for each lead in your own voice, and never sends anything without you.",
+  "symbol": "envelope.badge",
+  "accent": "#E152B0",
+  "industries": [
+    "real-estate"
+  ],
+  "bot": {
+    "color": "rose",
+    "agent": "claude",
+    "helpsWith": "Drafts the next touch for every lead, and says who has gone quiet."
+  },
+  "recommendedFor": [
+    "real-estate-crm"
+  ],
+  "jobs": [
+    {
+      "id": "chat",
+      "name": "Chat",
+      "symbol": "bubble.left.and.text.bubble.right",
+      "recipeID": "general",
+      "contractID": "bot-chat@1"
+    },
+    {
+      "id": "followup",
+      "name": "Draft follow-ups",
+      "symbol": "paperplane",
+      "recipeID": "general",
+      "contractID": "lead-followup@1"
+    }
+  ],
+  "connectorIDs": [
+    "airtable",
+    "twilio",
+    "operator-mail"
+  ],
+  "skillIDs": [],
+  "mcpServerIDs": []
+}

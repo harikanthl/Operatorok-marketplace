@@ -1,0 +1,17 @@
+{
+  "name": "operator-research",
+  "version": "1.0.0",
+  "description": "Operator research skills",
+  "author": {
+    "name": "Operator",
+    "url": "https://operatorok.com"
+  },
+  "homepage": "https://operatorok.com",
+  "license": "MIT",
+  "keywords": [
+    "grounded-citations",
+    "literature-search",
+    "paper-report",
+    "reproduce-paper"
+  ]
+}

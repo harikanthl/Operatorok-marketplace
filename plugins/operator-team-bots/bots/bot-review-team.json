@@ -1,0 +1,47 @@
+{
+  "id": "bot-review-team",
+  "name": "Review Team",
+  "tagline": "A crew that reads your code and tells you what would actually hurt.",
+  "blurb": "Talk to the Review Team the way you would talk to a lead: say what you changed and what you are worried about. When you want the real pass, it opens a session and runs the crew — a lead who divides the codebase by what it actually is, and reviewers for architecture, security, tests and correctness. One report comes back, not four.",
+  "symbol": "person.3.sequence",
+  "accent": "#3B93F0",
+  "operations": [
+    "engineering"
+  ],
+  "capabilities": [
+    "One report, not four opinions",
+    "Every finding names a file and a line",
+    "Ranked by what would hurt if it shipped"
+  ],
+  "bot": {
+    "color": "bleu",
+    "agent": "claude",
+    "helpsWith": "Reviews code with a crew — architecture, security, tests, correctness."
+  },
+  "recommendedFor": [
+    "software-engineering",
+    "codebase-health"
+  ],
+  "jobs": [
+    {
+      "id": "chat",
+      "name": "Chat",
+      "symbol": "bubble.left.and.text.bubble.right",
+      "recipeID": "general",
+      "contractID": "bot-chat@1"
+    },
+    {
+      "id": "review",
+      "name": "Review this codebase",
+      "symbol": "checklist",
+      "recipeID": "software-engineering",
+      "contractID": "codebase-audit@1"
+    }
+  ],
+  "connectorIDs": [],
+  "skillIDs": [
+    "requesting-code-review",
+    "systematic-debugging"
+  ],
+  "mcpServerIDs": []
+}

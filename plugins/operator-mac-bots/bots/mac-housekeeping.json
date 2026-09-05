@@ -1,0 +1,73 @@
+{
+  "id": "mac-housekeeping",
+  "name": "Mac Housekeeping",
+  "tagline": "Find out what filled your disk, and reclaim it with your approval.",
+  "blurb": "Accounts for every gigabyte on this Mac — caches, build folders, container images, Time Machine snapshots — and says which are regenerable, which are yours, and which macOS is already managing. It deletes nothing on its own: it proposes a list, you approve what goes, and it reports exactly what it freed. Nothing leaves the machine.",
+  "symbol": "internaldrive",
+  "accent": "#64748B",
+  "featured": false,
+  "industries": [],
+  "operations": [
+    "operations"
+  ],
+  "capabilities": [
+    "Full disk accounting",
+    "Regenerable vs yours",
+    "Snapshot check",
+    "Approve before deleting"
+  ],
+  "requirements": [
+    "Mac"
+  ],
+  "jobs": [
+    {
+      "id": "chat",
+      "name": "Chat",
+      "symbol": "bubble.left.and.text.bubble.right",
+      "recipeID": "general",
+      "contractID": "bot-chat@1"
+    },
+    {
+      "id": "disk-report",
+      "name": "Disk Report",
+      "symbol": "chart.pie",
+      "recipeID": "general",
+      "prompt": "Account for the disk on this Mac and write a report â DELETE NOTHING, and run no command that removes a file.\n\nGather, tolerating any tool that is missing or refuses:\nâ¢ `df -h /`\nâ¢ `mo analyze --json` (Mole; if `mo` is absent say so and continue)\nâ¢ `mo clean --dry-run`, then read `~/.config/mole/clean-list.txt` â it lists each candidate path with its size and item count. That file is your source for cache paths; do not re-derive them from the printed report.\nâ¢ `tmutil listlocalsnapshots /`\nâ¢ `du -sh` on: ~/Library/Developer/Xcode/DerivedData, ~/Library/Developer/Xcode/iOS DeviceSupport, ~/Library/Developer/CoreSimulator, ~/Library/Containers/com.docker.docker/Data, ~/Library/Application Support/com.apple.container\n\nThen produce the REPORT as a self-contained HTML artifact in chat (the `visual-report` skill has the rules; one short plain sentence before the tag, everything else inside it) and write the same document to ./outbox/disk-report.html.\n\nLead with three stat cards: total, free, and reclaimable. Then ONE table per group, biggest first, each row a path with its size and one line saying what brings it back â REGENERABLE (comes back by itself), RECONSTRUCTIBLE (re-downloads), YOURS (never propose deleting), MANAGED BY MACOS. Sizes are the numbers you measured; never round a 6.25GB into 'about 6GB'.\n\nSay plainly which categories you could NOT read because permission was denied â its own row, not a footnote. A total that silently under-counts is worse than one that admits a gap.\n\nSnapshots: report them, and mark any named `com.apple.os.update-*` as KEEP â they are the rollback for a system update.\n\nAlso write ./outbox/clean-plan.json: {\"generatedAt\":\"<ISO8601>\",\"freeBytes\":<n>,\"items\":[{\"path\":\"<absolute>\",\"bytes\":<n>,\"category\":\"<name>\",\"tier\":1|2|3,\"reappears\":\"<one line>\"}]}. Tier 1 = regenerable caches and build folders. Tier 2 = container images and simulator runtimes. Tier 3 = snapshots, project artifacts, Trash. Absolute paths only, and include nothing you did not personally measure.",
+      "needsRepo": false,
+      "connectorIDs": [],
+      "saysLike": [
+        "disk",
+        "space",
+        "storage",
+        "full",
+        "free up",
+        "clean",
+        "cleanup",
+        "caches",
+        "derived data",
+        "simulators",
+        "gigabytes"
+      ],
+      "contractID": "disk-report@1",
+      "capabilities": [
+        "Deletes nothing",
+        "Every byte has a path",
+        "Runs on this Mac"
+      ]
+    }
+  ],
+  "bot": {
+    "color": "gris",
+    "agent": "claude",
+    "helpsWith": "Accounts for every gigabyte on this Mac and reclaims only what you approve by name."
+  },
+  "recommendedFor": [
+    "mac-health"
+  ],
+  "connectorIDs": [],
+  "skillIDs": [
+    "visual-report",
+    "clear-replies"
+  ],
+  "mcpServerIDs": []
+}

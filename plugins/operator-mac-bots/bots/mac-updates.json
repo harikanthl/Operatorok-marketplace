@@ -1,0 +1,72 @@
+{
+  "id": "mac-updates",
+  "name": "Updates",
+  "tagline": "What on this Mac is out of date, and which one actually matters.",
+  "blurb": "Checks macOS, Homebrew, the App Store and your Xcode simulator runtimes, then says what is behind and what is worth doing about it. It will upgrade one Homebrew formula you name. It will never install a macOS update, because that needs sudo and usually a restart: it names the update and points at the pane.",
+  "symbol": "arrow.triangle.2.circlepath",
+  "accent": "#F59E0B",
+  "featured": false,
+  "industries": [],
+  "operations": [
+    "operations"
+  ],
+  "capabilities": [
+    "macOS, Homebrew, App Store, Xcode",
+    "Upgrades one formula you name",
+    "Never installs macOS, never sudo",
+    "Runs on this Mac"
+  ],
+  "requirements": [
+    "Mac"
+  ],
+  "bot": {
+    "color": "ambre",
+    "agent": "claude",
+    "helpsWith": "Says what on this Mac is out of date, and upgrades the one thing you name."
+  },
+  "recommendedFor": [
+    "mac-health"
+  ],
+  "jobs": [
+    {
+      "id": "chat",
+      "name": "Chat",
+      "symbol": "bubble.left.and.text.bubble.right",
+      "recipeID": "general",
+      "contractID": "bot-chat@1"
+    },
+    {
+      "id": "check-updates",
+      "name": "Check for updates",
+      "symbol": "arrow.triangle.2.circlepath",
+      "recipeID": "general",
+      "prompt": "Say what on this Mac is out of date. CHANGE NOTHING unless the person asks you to, and never run sudo.\n\nGather:\n- `softwareupdate -l` for macOS. THIS TAKES ABOUT 45 SECONDS on a normal connection. Say you are checking before you start it, so the wait is expected rather than a hang.\n- `HOMEBREW_NO_AUTO_UPDATE=1 brew outdated --json` for Homebrew. The variable is NOT optional: without it the command spends about 13 seconds updating Homebrew's own repository, which is a change, not a read. With it the same command takes half a second.\n- `mas outdated` for the App Store, IF `mas` is installed. It usually is not. Say so in one line and continue; that is not an error.\n- `xcodebuild -version` and `xcrun simctl runtime list -j` for Xcode and its simulator runtimes\n\nWHAT YOU MAY AND MAY NOT DO:\n- You MAY run `brew upgrade <formula>` for ONE NAMED FORMULA, and only when the person named it. NEVER a bare `brew upgrade`, which upgrades everything at once and is not what anybody means.\n- You may NOT install a macOS update. `softwareupdate -i` needs sudo and most macOS updates restart the machine. Name the update, give its size, and point at System Settings, Software Update. Print the command if they ask for it. Do not run it.\n- A macOS MAJOR version is never installed by a job. Name it and stop.\n- `mas upgrade` follows the same rule: name it, print it, do not run it.\n\nWrite the report to ./outbox/updates-report.md and answer in chat, leading with the count and with the one update that actually matters. Security updates come first; a simulator runtime nobody uses comes last.",
+      "needsRepo": false,
+      "connectorIDs": [],
+      "saysLike": [
+        "out of date",
+        "outdated",
+        "update",
+        "upgrade",
+        "homebrew",
+        "brew",
+        "xcode",
+        "macos",
+        "software update",
+        "app store"
+      ],
+      "contractID": "mac-updates@1",
+      "capabilities": [
+        "Four sources in one answer",
+        "One formula at a time, named",
+        "macOS is named, never installed"
+      ]
+    }
+  ],
+  "connectorIDs": [],
+  "skillIDs": [
+    "mac-instruments",
+    "clear-replies"
+  ],
+  "mcpServerIDs": []
+}

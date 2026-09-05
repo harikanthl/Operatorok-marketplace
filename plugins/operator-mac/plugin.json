@@ -1,0 +1,15 @@
+{
+  "name": "operator-mac",
+  "version": "1.0.0",
+  "description": "Operator Mac skills",
+  "author": {
+    "name": "Operator",
+    "url": "https://operatorok.com"
+  },
+  "homepage": "https://operatorok.com",
+  "license": "MIT",
+  "keywords": [
+    "mac-instruments",
+    "local-model-tiers"
+  ]
+}

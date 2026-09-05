@@ -1,0 +1,70 @@
+{
+  "id": "mac-backup",
+  "name": "Backup",
+  "tagline": "When this Mac was last backed up, and whether that is a problem.",
+  "blurb": "Reads Time Machine's destinations, its last completed backup and the local snapshots on the boot disk, then says how old your safety net is in plain words. It knows the difference between having no backup and having a backup disk that is simply not plugged in, which look identical if you only read the exit code. Ask it to back up now and it will.",
+  "symbol": "clock.arrow.circlepath",
+  "accent": "#3B82F6",
+  "featured": false,
+  "industries": [],
+  "operations": [
+    "operations"
+  ],
+  "capabilities": [
+    "Age of the last real backup",
+    "Knows unplugged from never",
+    "Snapshots are not backups",
+    "Backs up now when you ask"
+  ],
+  "requirements": [
+    "Mac"
+  ],
+  "bot": {
+    "color": "bleu",
+    "agent": "claude",
+    "helpsWith": "Says how old this Mac's last backup is, and starts one when you ask."
+  },
+  "recommendedFor": [
+    "mac-health"
+  ],
+  "jobs": [
+    {
+      "id": "chat",
+      "name": "Chat",
+      "symbol": "bubble.left.and.text.bubble.right",
+      "recipeID": "general",
+      "contractID": "bot-chat@1"
+    },
+    {
+      "id": "backup-status",
+      "name": "Backup status",
+      "symbol": "clock.arrow.circlepath",
+      "recipeID": "general",
+      "prompt": "Say when this Mac was last backed up and whether that is a problem. CHANGE NOTHING unless the person asks, and never run sudo.\n\nGather:\n- `tmutil destinationinfo` for the configured destinations. `No destinations configured.` means Time Machine has never been set up, and that is the most important thing this job can find.\n- `tmutil latestbackup` for the newest backup. IMPORTANT: THIS EXITS 0 EVEN WHEN IT FAILS. On a Mac whose backup disk is not attached it prints `Failed to mount destination` and still returns success. Read the OUTPUT, never the exit code, and report the difference between 'no backup exists' and 'the backup disk is not plugged in'. Those are completely different problems and only one of them is the person's fault.\n- `tmutil status` for a backup running right now\n- `tmutil listlocalsnapshots /` for local snapshots. THESE ARE NOT BACKUPS: they live on the same disk and vanish with it. Say that whenever they are all there is. Deleting them belongs to Mac Housekeeping, not here.\n- `brctl status | head -40` for iCloud Drive if it helps. Its output is long and full of terminal colour codes, so summarise it rather than pasting it.\n\nWHAT THE ANSWER MEANS:\n- A backup older than a week is worth naming. Older than a month is the headline.\n- No destination configured is the headline whatever else is true.\n- Local snapshots and no Time Machine destination is the dangerous case that looks safe. Say it plainly.\n\nYou MAY run `tmutil startbackup` when the person asks for a backup now. It needs no sudo. Nothing else in this job changes anything.\n\nWrite the report to ./outbox/backup-report.md and answer in chat with the age of the last backup in plain words.",
+      "needsRepo": false,
+      "connectorIDs": [],
+      "saysLike": [
+        "time machine",
+        "backed up",
+        "back up",
+        "snapshot",
+        "snapshots",
+        "icloud",
+        "restore",
+        "last backup"
+      ],
+      "contractID": "mac-backup@1",
+      "capabilities": [
+        "Reads the output, not the exit code",
+        "Snapshots called what they are",
+        "Starts a backup when asked"
+      ]
+    }
+  ],
+  "connectorIDs": [],
+  "skillIDs": [
+    "mac-instruments",
+    "clear-replies"
+  ],
+  "mcpServerIDs": []
+}

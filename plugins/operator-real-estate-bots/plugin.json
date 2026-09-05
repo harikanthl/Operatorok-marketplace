@@ -1,0 +1,16 @@
+{
+  "name": "operator-real-estate-bots",
+  "version": "1.0.0",
+  "description": "Operator bot templates: Listing Writer, Follow-up Agent, Showing Coordinator",
+  "author": {
+    "name": "Operator",
+    "url": "https://operatorok.com"
+  },
+  "homepage": "https://operatorok.com",
+  "license": "MIT",
+  "keywords": [
+    "bot-listing-writer",
+    "bot-follow-up",
+    "bot-showing-coordinator"
+  ]
+}

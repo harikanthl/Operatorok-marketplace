@@ -1,0 +1,41 @@
+{
+  "id": "bot-showing-coordinator",
+  "name": "Showing Coordinator",
+  "tagline": "Holds the diary for showings so you can hold the conversation.",
+  "blurb": "Tell it who wants to see what and when they are free. It works out the order, drafts the confirmations, and tells you what clashes.",
+  "symbol": "calendar.badge.clock",
+  "accent": "#22A8C4",
+  "industries": [
+    "real-estate"
+  ],
+  "bot": {
+    "color": "cyan",
+    "agent": "claude",
+    "helpsWith": "Schedules and confirms showings, and says what clashes."
+  },
+  "recommendedFor": [
+    "real-estate-crm"
+  ],
+  "jobs": [
+    {
+      "id": "chat",
+      "name": "Chat",
+      "symbol": "bubble.left.and.text.bubble.right",
+      "recipeID": "general",
+      "contractID": "bot-chat@1"
+    },
+    {
+      "id": "schedule",
+      "name": "Schedule showings",
+      "symbol": "calendar",
+      "recipeID": "general",
+      "contractID": "showing-scheduler@1"
+    }
+  ],
+  "connectorIDs": [
+    "twilio",
+    "operator-mail"
+  ],
+  "skillIDs": [],
+  "mcpServerIDs": []
+}

@@ -1,0 +1,74 @@
+{
+  "id": "mac-health",
+  "name": "Mac Doctor",
+  "tagline": "Ask why this Mac is hot, slow, or crashing, and get the numbers.",
+  "blurb": "Reads what macOS already knows about itself: battery condition and cycle count, thermal and power state, memory pressure, what is eating the CPU right now, and the crash reports from the last few days. Then it says which of those numbers is a problem and which is normal, because most of them are normal. It changes nothing, it never runs sudo, and it never opens your own files.",
+  "symbol": "stethoscope",
+  "accent": "#22C55E",
+  "featured": false,
+  "industries": [],
+  "operations": [
+    "operations"
+  ],
+  "capabilities": [
+    "Battery, thermals, memory, crashes",
+    "Says which numbers are normal",
+    "Changes nothing, never sudo",
+    "Runs on this Mac"
+  ],
+  "requirements": [
+    "Mac"
+  ],
+  "bot": {
+    "color": "vert",
+    "agent": "claude",
+    "helpsWith": "Says why this Mac is hot, slow, or crashing, from what macOS reports about itself."
+  },
+  "recommendedFor": [
+    "mac-housekeeping"
+  ],
+  "jobs": [
+    {
+      "id": "chat",
+      "name": "Chat",
+      "symbol": "bubble.left.and.text.bubble.right",
+      "recipeID": "general",
+      "contractID": "bot-chat@1"
+    },
+    {
+      "id": "health-check",
+      "name": "Health check",
+      "symbol": "stethoscope",
+      "recipeID": "general",
+      "prompt": "Report on this Mac's health. CHANGE NOTHING: run no command that installs, deletes, moves or reconfigures anything, and never run sudo.\n\nGather, tolerating any tool that is missing or refuses. All of these are fast (well under a second) except top, which needs two samples:\n- `system_profiler SPHardwareDataType SPSoftwareDataType` for the machine and the OS\n- `system_profiler SPPowerDataType` and `pmset -g batt` for battery condition and cycle count\n- `pmset -g therm` and `pmset -g` for thermal and power state\n- `vm_stat`, `sysctl vm.swapusage` and `memory_pressure` for memory\n- `top -l 2 -o cpu -n 10`, and read the SECOND sample only. The first sample's CPU percentages are cumulative since boot and mean nothing.\n- `ls -lt ~/Library/Logs/DiagnosticReports/ | head -20` for recent crash reports, then read the newest two or three .ips files\n- `diskutil info /` for the boot volume\n\nWHAT THE NUMBERS MEAN, so you do not alarm anyone over nothing:\n- Battery Condition `Normal` is fine at any cycle count. `Service Recommended` is the only value worth raising. A few hundred cycles is ordinary.\n- `pmset -g therm` printing `No thermal warning level has been recorded` is GOOD news: this Mac has never throttled. Say so plainly rather than leaving it out.\n- Swap in use is normal on macOS and is not a problem by itself. Memory pressure, not swap size, is the number that matters.\n- An .ips file is not a crash of the Mac. Most are one app or one helper. Group them by process and say which, if any, repeat.\n- top's percentages are per core: 100% is one core busy, not the machine.\n\nNEVER RUN these, because they need sudo: `powermetrics`, `sysdiagnose`. If one of them would answer the question, print the exact command in a fenced block for the person to run and say in one line what it would add.\n\nWrite the report to ./outbox/health-report.md and give the same answer in chat. Lead with one sentence that answers the question you were actually asked. If nothing is wrong, say that first and plainly.",
+      "needsRepo": false,
+      "connectorIDs": [],
+      "saysLike": [
+        "hot",
+        "slow",
+        "crash",
+        "crashing",
+        "crashed",
+        "battery",
+        "fan",
+        "memory",
+        "cpu",
+        "thermal",
+        "freezing",
+        "sluggish"
+      ],
+      "contractID": "mac-health@1",
+      "capabilities": [
+        "Battery, thermal and memory state",
+        "Recent crashes, grouped by app",
+        "Deletes nothing, runs no sudo"
+      ]
+    }
+  ],
+  "connectorIDs": [],
+  "skillIDs": [
+    "mac-instruments",
+    "clear-replies"
+  ],
+  "mcpServerIDs": []
+}

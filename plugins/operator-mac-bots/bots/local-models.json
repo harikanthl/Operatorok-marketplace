@@ -1,0 +1,118 @@
+{
+  "id": "local-models",
+  "name": "Local Models",
+  "tagline": "Put a model on this Mac that fits it, and point your bots at it.",
+  "blurb": "Reads what this Mac can actually run (its memory, its free disk, whether Ollama is already there), recommends one model from a tier table, installs the runtime with your approval, and pulls the model with a cancel button and a progress bar. Then your chats and your bots' work can run on it: free, private, offline. It never starts a download that cannot land, and it tells you a model is too big before a byte moves.",
+  "symbol": "cpu",
+  "accent": "#10B981",
+  "featured": false,
+  "industries": [],
+  "operations": [
+    "operations"
+  ],
+  "capabilities": [
+    "Too big is said before the download",
+    "Pull with progress, cancel, resume",
+    "Free and private, nothing leaves the Mac",
+    "Delete is a verb"
+  ],
+  "requirements": [
+    "Mac",
+    "Apple silicon"
+  ],
+  "bot": {
+    "color": "emeraude",
+    "agent": "claude",
+    "helpsWith": "Puts a model on this Mac that fits it, and points your bots at it: free, private, offline."
+  },
+  "recommendedFor": [
+    "mac-housekeeping",
+    "software-engineering"
+  ],
+  "jobs": [
+    {
+      "id": "chat",
+      "name": "Chat",
+      "symbol": "bubble.left.and.text.bubble.right",
+      "recipeID": "general",
+      "contractID": "bot-chat@1"
+    },
+    {
+      "id": "fit-check",
+      "name": "Check this Mac",
+      "symbol": "cpu",
+      "recipeID": "general",
+      "needsRepo": false,
+      "connectorIDs": [],
+      "contractID": "fit-check@1",
+      "capabilities": [
+        "Reads memory, chip, free disk",
+        "Sees what Ollama already has",
+        "Runs on this Mac"
+      ]
+    },
+    {
+      "id": "recommend",
+      "name": "Recommend a model",
+      "symbol": "wand.and.stars",
+      "recipeID": "general",
+      "prompt": "Recommend ONE local model for this Mac using the local-model-tiers skill, from the measured facts in $HOME/Library/Application Support/Operator/LocalModels/fit.json. If that file is missing, say so and stop: the person needs to run Check this Mac first. Write pick.json (to that same folder AND to ./outbox/pick.json) and ./outbox/recommendation.md exactly as the skill describes. Download nothing. Install nothing. State the numbers you used.",
+      "needsRepo": false,
+      "connectorIDs": [],
+      "contractID": "recommend-local-model@1",
+      "capabilities": [
+        "One pick, with the numbers",
+        "Fits, tight, or too big",
+        "Disk checked before any pull"
+      ]
+    },
+    {
+      "id": "install-ollama",
+      "name": "Install Ollama",
+      "symbol": "shippingbox",
+      "recipeID": "general",
+      "needsRepo": false,
+      "connectorIDs": [],
+      "contractID": "install-ollama@1",
+      "capabilities": [
+        "Runs: brew install ollama",
+        "Starts it as your user, never sudo",
+        "Reports when it answers"
+      ]
+    },
+    {
+      "id": "pull-model",
+      "name": "Pull the model",
+      "symbol": "arrow.down.circle",
+      "recipeID": "general",
+      "needsRepo": false,
+      "connectorIDs": [],
+      "contractID": "pull-model@1",
+      "capabilities": [
+        "Progress while it downloads",
+        "Cancel stops it, next run resumes",
+        "Uses the recommended pick"
+      ]
+    },
+    {
+      "id": "remove-model",
+      "name": "Remove the model",
+      "symbol": "trash",
+      "recipeID": "general",
+      "needsRepo": false,
+      "connectorIDs": [],
+      "contractID": "remove-model@1",
+      "capabilities": [
+        "Deletes one model by tag",
+        "Frees its space",
+        "Only the model you name"
+      ]
+    }
+  ],
+  "connectorIDs": [],
+  "skillIDs": [
+    "local-model-tiers",
+    "clear-replies"
+  ],
+  "mcpServerIDs": []
+}

@@ -1,0 +1,38 @@
+{
+  "id": "bot-qa-inspector",
+  "name": "QA Inspector",
+  "tagline": "Photograph the first article. Get a record that holds up.",
+  "blurb": "Ask it what to check and in what order. Hand it photos of a first article and it writes the timestamped inspection record, with what it could not see stated rather than assumed.",
+  "symbol": "checkmark.seal",
+  "accent": "#8B5CF6",
+  "industries": [
+    "manufacturing"
+  ],
+  "bot": {
+    "color": "violet",
+    "agent": "claude",
+    "helpsWith": "First-article checks, in order, with a record that states what it could not see."
+  },
+  "recommendedFor": [
+    "machine-shop"
+  ],
+  "jobs": [
+    {
+      "id": "chat",
+      "name": "Chat",
+      "symbol": "bubble.left.and.text.bubble.right",
+      "recipeID": "general",
+      "contractID": "bot-chat@1"
+    },
+    {
+      "id": "inspect",
+      "name": "First-article inspection",
+      "symbol": "camera.viewfinder",
+      "recipeID": "document-analysis",
+      "contractID": "first-article@1"
+    }
+  ],
+  "connectorIDs": [],
+  "skillIDs": [],
+  "mcpServerIDs": []
+}

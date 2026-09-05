@@ -1,0 +1,31 @@
+{
+  "id": "bot-cnc-expert",
+  "name": "CNC Expert",
+  "tagline": "The setup knowledge that usually lives in one person's head.",
+  "blurb": "Ask it about feeds, speeds, fixturing and why the last part came out wrong. It answers from your own shop's SOPs and setup cards when you have them, and says so plainly when you do not.",
+  "symbol": "gearshape.2",
+  "accent": "#F0B429",
+  "industries": [
+    "manufacturing"
+  ],
+  "bot": {
+    "color": "dore",
+    "agent": "claude",
+    "helpsWith": "Feeds, speeds, fixturing, and why the last part came out wrong."
+  },
+  "recommendedFor": [
+    "machine-shop"
+  ],
+  "jobs": [
+    {
+      "id": "chat",
+      "name": "Chat",
+      "symbol": "bubble.left.and.text.bubble.right",
+      "recipeID": "general",
+      "contractID": "bot-chat@1"
+    }
+  ],
+  "connectorIDs": [],
+  "skillIDs": [],
+  "mcpServerIDs": []
+}

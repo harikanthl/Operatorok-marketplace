@@ -1,0 +1,72 @@
+{
+  "id": "mac-network",
+  "name": "Network",
+  "tagline": "Ask why the internet feels slow, and find out which part actually is.",
+  "blurb": "Runs Apple's own responsiveness test and reads the DNS, the route, the Wi-Fi signal and any VPN, then names the part that is slow. Most slow connections are not slow at all: they are bufferbloat, a far-away resolver, a weak signal, or a VPN nobody remembered turning on. The speed test moves real data, so it says so before it starts and asks first on a hotspot.",
+  "symbol": "wifi",
+  "accent": "#06B6D4",
+  "featured": false,
+  "industries": [],
+  "operations": [
+    "operations"
+  ],
+  "capabilities": [
+    "Apple's own responsiveness test",
+    "DNS, route, Wi-Fi signal, VPN",
+    "Warns before it uses your data",
+    "Runs on this Mac"
+  ],
+  "requirements": [
+    "Mac"
+  ],
+  "bot": {
+    "color": "cyan",
+    "agent": "claude",
+    "helpsWith": "Finds which part of a slow connection is actually slow: the link, the DNS, the Wi-Fi or a VPN."
+  },
+  "recommendedFor": [
+    "mac-health"
+  ],
+  "jobs": [
+    {
+      "id": "chat",
+      "name": "Chat",
+      "symbol": "bubble.left.and.text.bubble.right",
+      "recipeID": "general",
+      "contractID": "bot-chat@1"
+    },
+    {
+      "id": "network-check",
+      "name": "Network check",
+      "symbol": "wifi",
+      "recipeID": "general",
+      "prompt": "Say why this Mac's internet is slow, or say that it is not. CHANGE NOTHING and never run sudo.\n\nIMPORTANT: `networkQuality` TRANSFERS REAL DATA. Measured on an ordinary connection it took about 28 seconds and moved roughly 290 MB. Say that before you run it, and do NOT run it when the person is on a hotspot, a tethered phone or a metered plan unless they have told you to go ahead. Every other command below is free and instant.\n\nGather:\n- `scutil --dns` for the resolvers in use, then time one lookup with `dig apple.com` and read its `Query time` line\n- `ifconfig` and `ipconfig getsummary en0` for the active interface and its address\n- `netstat -rn | head -20` for the default route\n- `system_profiler SPAirPortDataType` for Wi-Fi: the band, the channel, the RSSI and the noise (about 4 seconds)\n- `scutil --nc list` for VPNs, which are the most common reason a fast network feels slow\n- `networkQuality -v` LAST, and only under the rule above\n\nWHAT THE NUMBERS MEAN:\n- RSSI better than -60 dBm is strong, around -70 is workable, worse than -80 is the problem. A noise floor near -90 is normal; above -80 means interference.\n- Apple's responsiveness score (RPM) is what makes a connection FEEL fast. High capacity with a low RPM is bufferbloat, and it is the answer to most 'fast internet that feels slow' complaints.\n- A DNS query over about 100 ms is worth naming even when throughput is fine.\n- 2.4 GHz is slower and more crowded than 5 GHz. Say which band this Mac is on.\n\nNEVER RUN `wdutil`: every one of its subcommands needs sudo, and without it the tool prints nothing but its own usage. If its Wi-Fi detail would help, print `sudo wdutil info` for the person and say what it adds.\n\nWrite the report to ./outbox/network-report.md and answer in chat, leading with the one thing that is slow, or with the fact that nothing is.",
+      "needsRepo": false,
+      "connectorIDs": [],
+      "saysLike": [
+        "internet",
+        "wifi",
+        "wi-fi",
+        "slow",
+        "dns",
+        "vpn",
+        "speed",
+        "connection",
+        "online",
+        "latency"
+      ],
+      "contractID": "mac-network@1",
+      "capabilities": [
+        "Responsiveness, not just speed",
+        "Names the slow part",
+        "Asks before using your data"
+      ]
+    }
+  ],
+  "connectorIDs": [],
+  "skillIDs": [
+    "mac-instruments",
+    "clear-replies"
+  ],
+  "mcpServerIDs": []
+}

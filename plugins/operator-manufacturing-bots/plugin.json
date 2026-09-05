@@ -1,0 +1,16 @@
+{
+  "name": "operator-manufacturing-bots",
+  "version": "1.0.0",
+  "description": "Operator bot templates: CNC Expert, SOP Builder, QA Inspector",
+  "author": {
+    "name": "Operator",
+    "url": "https://operatorok.com"
+  },
+  "homepage": "https://operatorok.com",
+  "license": "MIT",
+  "keywords": [
+    "bot-cnc-expert",
+    "bot-sop-builder",
+    "bot-qa-inspector"
+  ]
+}
