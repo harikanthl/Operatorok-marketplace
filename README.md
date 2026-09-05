@@ -124,11 +124,17 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Status
 
-The index, validator and generator are what this repo is. Installing from it inside the Operator
-app — browse in *Bots → New Bot → Skills → +*, install through your paired Mac, then *Make a bot
-from this* — is being built; until it ships, a plugin's skills can be added to Operator by pasting
-its `SKILL.md` into the same `+` sheet, and the Mac's Skill Packs card installs any plugin repo by
-URL today.
+The index, validator and generator are what this repo is. The Operator app installs from it:
+*Bots → New Bot → Skills → + → Add from marketplace* browses this index, shows a plugin's contents
+before anything is fetched, has your paired Mac fetch it at the pinned commit, and offers *Make a
+bot* for every bot template it ships. That installer is built and not yet in a released build; until
+it ships, a plugin's skills can be added by pasting its `SKILL.md` into the same `+` sheet, and the
+Mac's Skill Packs card installs any plugin repo by URL.
+
+What the app keeps from a plugin: every `SKILL.md` with its helper files up to 48 KiB per file and
+96 KiB per skill (a worker receives its skills over a bounded channel), every `.mcp.json` server,
+and every `bots/*.json`. Larger reference files are listed as skipped on the install receipt, by
+name, so a plugin never arrives quietly smaller than it looks here.
 
 ## License
 

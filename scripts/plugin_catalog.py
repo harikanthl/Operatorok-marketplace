@@ -153,6 +153,11 @@ def components(plugin_dir):
     for dirpath, dirnames, filenames in os.walk(walk_root):
         dirnames[:] = sorted(d for d in dirnames if not d.startswith(".") and d != "node_modules")
         if "SKILL.md" in filenames:
+            # A skill's own subfolders are its files, never further skills — a nested SKILL.md
+            # (Vercel vendors upstream skills under `skills/flags-sdk/upstream/`) rides along as a
+            # reference. The same rule the app's reader applies, so the count shown before install
+            # is the count that arrives.
+            dirnames[:] = []
             with open(os.path.join(dirpath, "SKILL.md"), "r", encoding="utf-8") as fh:
                 attrs, body = parse_frontmatter(fh.read())
             rel = os.path.relpath(dirpath, walk_root).replace(os.sep, "/")

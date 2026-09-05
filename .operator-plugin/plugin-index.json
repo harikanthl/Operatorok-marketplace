@@ -4064,18 +4064,6 @@
             "path": "ai-sdk"
           },
           {
-            "description": "Answer questions about the AI SDK and help build AI-powered features. Use when developers: (1) Ask about AI SDK functio…",
-            "files": [
-              "references/ai-gateway.md",
-              "references/common-errors.md",
-              "references/devtools.md",
-              "references/type-safe-agents.md"
-            ],
-            "hasBody": true,
-            "name": "ai-sdk",
-            "path": "ai-sdk/upstream"
-          },
-          {
             "description": "Authentication integration guidance — Clerk (native Vercel Marketplace), Descope, and Auth0 setup for Next.js applicati…",
             "files": [],
             "hasBody": true,
@@ -4113,13 +4101,6 @@
             "path": "chat-sdk"
           },
           {
-            "description": "Build multi-platform chat bots with Chat SDK (`chat` npm package). Use when developers want to (1) Build a Slack, Teams…",
-            "files": [],
-            "hasBody": true,
-            "name": "chat-sdk",
-            "path": "chat-sdk/upstream"
-          },
-          {
             "description": "Backend architecture guidance. Use when planning, building, or migrating an API or backend; choosing between Functions,…",
             "files": [
               "agents/openai.yaml"
@@ -4152,13 +4133,6 @@
             "path": "eve"
           },
           {
-            "description": "Build durable backend AI agents with the eve framework. Use when creating, editing, or debugging an eve project — agent…",
-            "files": [],
-            "hasBody": true,
-            "name": "eve",
-            "path": "eve/upstream"
-          },
-          {
             "description": "Flags SDK and Vercel Flags expert guidance. Use when declaring feature flags with flag(), wiring provider adapters (Ver…",
             "files": [
               "overlay.yaml",
@@ -4174,18 +4148,6 @@
             "hasBody": true,
             "name": "flags-sdk",
             "path": "flags-sdk"
-          },
-          {
-            "description": "Guide for feature flags and A/B tests with the Flags SDK (`flags` npm package) and Vercel Flags. Use when: declaring fl…",
-            "files": [
-              "references/api.md",
-              "references/nextjs.md",
-              "references/providers.md",
-              "references/sveltekit.md"
-            ],
-            "hasBody": true,
-            "name": "flags-sdk",
-            "path": "flags-sdk/upstream"
           },
           {
             "description": "Corrects outdated LLM knowledge about the Vercel platform and introduces new products. Injected at session start.",
@@ -4216,34 +4178,6 @@
             "path": "microfrontends"
           },
           {
-            "description": "Next.js best practices - file conventions, RSC boundaries, data patterns, async APIs, metadata, error handling, route h…",
-            "files": [
-              "references/app-router-files.md",
-              "references/async-patterns.md",
-              "references/bundling.md",
-              "references/data-patterns.md",
-              "references/debug-tricks.md",
-              "references/directives.md",
-              "references/error-handling.md",
-              "references/file-conventions.md",
-              "references/font.md",
-              "references/functions.md",
-              "references/hydration-error.md",
-              "references/image.md",
-              "references/metadata.md",
-              "references/parallel-routes.md",
-              "references/route-handlers.md",
-              "references/rsc-boundaries.md",
-              "references/runtime-selection.md",
-              "references/scripts.md",
-              "references/self-hosting.md",
-              "references/suspense-boundaries.md"
-            ],
-            "hasBody": true,
-            "name": "next-best-practices",
-            "path": "nextjs/upstream"
-          },
-          {
             "description": "Next.js 16 Cache Components guidance — PPR, use cache directive, cacheLife, cacheTag, updateTag, and migration from uns…",
             "files": [
               "overlay.yaml"
@@ -4251,13 +4185,6 @@
             "hasBody": true,
             "name": "next-cache-components",
             "path": "next-cache-components"
-          },
-          {
-            "description": "Next.js 16 Cache Components - PPR, use cache directive, cacheLife, cacheTag, updateTag",
-            "files": [],
-            "hasBody": true,
-            "name": "next-cache-components",
-            "path": "next-cache-components/upstream"
           },
           {
             "description": "next-forge expert guidance — production-grade Turborepo monorepo SaaS starter by Vercel. Use when working in a next-for…",
@@ -4277,18 +4204,6 @@
             "path": "next-forge"
           },
           {
-            "description": "Expert assistance for next-forge — a production-grade Turborepo template for Next.js SaaS apps. Triggers on questions a…",
-            "files": [
-              "references/architecture.md",
-              "references/customization.md",
-              "references/packages.md",
-              "references/setup.md"
-            ],
-            "hasBody": true,
-            "name": "next-forge",
-            "path": "next-forge/upstream"
-          },
-          {
             "description": "Upgrade Next.js to the latest version following official migration guides and codemods. Use when upgrading Next.js vers…",
             "files": [
               "overlay.yaml"
@@ -4296,13 +4211,6 @@
             "hasBody": true,
             "name": "next-upgrade",
             "path": "next-upgrade"
-          },
-          {
-            "description": "Upgrade Next.js to the latest version following official migration guides and codemods",
-            "files": [],
-            "hasBody": true,
-            "name": "next-upgrade",
-            "path": "next-upgrade/upstream"
           },
           {
             "description": "Next.js App Router expert guidance. Use when building, debugging, or architecting Next.js applications — routing, Serve…",
@@ -4575,31 +4483,6 @@
             "path": "vercel-cli"
           },
           {
-            "description": "Deploy, manage, and develop projects on Vercel from the command line",
-            "files": [
-              "command/vercel.md",
-              "references/advanced.md",
-              "references/bun.md",
-              "references/ci-automation.md",
-              "references/deployment.md",
-              "references/domains-and-dns.md",
-              "references/environment-variables.md",
-              "references/flags.md",
-              "references/getting-started.md",
-              "references/global-options.md",
-              "references/integrations.md",
-              "references/local-development.md",
-              "references/monitoring-and-debugging.md",
-              "references/monorepos.md",
-              "references/node-backends.md",
-              "references/projects-and-teams.md",
-              "references/storage.md"
-            ],
-            "hasBody": true,
-            "name": "vercel-cli",
-            "path": "vercel-cli/upstream"
-          },
-          {
             "description": "Vercel Connect expert guidance — securely obtain scoped OAuth tokens for third-party services (Slack, GitHub, MCP serve…",
             "files": [],
             "hasBody": true,
@@ -4621,81 +4504,6 @@
             "path": "vercel-functions"
           },
           {
-            "description": "React and Next.js performance optimization guidelines from Vercel Engineering. This skill should be used when writing,…",
-            "files": [
-              "AGENTS.md",
-              "rules/_sections.md",
-              "rules/_template.md",
-              "rules/advanced-event-handler-refs.md",
-              "rules/advanced-init-once.md",
-              "rules/advanced-use-latest.md",
-              "rules/async-api-routes.md",
-              "rules/async-defer-await.md",
-              "rules/async-dependencies.md",
-              "rules/async-parallel.md",
-              "rules/async-suspense-boundaries.md",
-              "rules/bundle-barrel-imports.md",
-              "rules/bundle-conditional.md",
-              "rules/bundle-defer-third-party.md",
-              "rules/bundle-dynamic-imports.md",
-              "rules/bundle-preload.md",
-              "rules/client-event-listeners.md",
-              "rules/client-localstorage-schema.md",
-              "rules/client-passive-event-listeners.md",
-              "rules/client-swr-dedup.md",
-              "rules/js-batch-dom-css.md",
-              "rules/js-cache-function-results.md",
-              "rules/js-cache-property-access.md",
-              "rules/js-cache-storage.md",
-              "rules/js-combine-iterations.md",
-              "rules/js-early-exit.md",
-              "rules/js-flatmap-filter.md",
-              "rules/js-hoist-regexp.md",
-              "rules/js-index-maps.md",
-              "rules/js-length-check-first.md",
-              "rules/js-min-max-loop.md",
-              "rules/js-set-map-lookups.md",
-              "rules/js-tosorted-immutable.md",
-              "rules/rendering-activity.md",
-              "rules/rendering-animate-svg-wrapper.md",
-              "rules/rendering-conditional-render.md",
-              "rules/rendering-content-visibility.md",
-              "rules/rendering-hoist-jsx.md",
-              "rules/rendering-hydration-no-flicker.md",
-              "rules/rendering-hydration-suppress-warning.md",
-              "rules/rendering-resource-hints.md",
-              "rules/rendering-script-defer-async.md",
-              "rules/rendering-svg-precision.md",
-              "rules/rendering-usetransition-loading.md",
-              "rules/rerender-defer-reads.md",
-              "rules/rerender-dependencies.md",
-              "rules/rerender-derived-state-no-effect.md",
-              "rules/rerender-derived-state.md",
-              "rules/rerender-functional-setstate.md",
-              "rules/rerender-lazy-state-init.md",
-              "rules/rerender-memo-with-default-value.md",
-              "rules/rerender-memo.md",
-              "rules/rerender-move-effect-to-event.md",
-              "rules/rerender-no-inline-components.md",
-              "rules/rerender-simple-expression-in-memo.md",
-              "rules/rerender-split-combined-hooks.md",
-              "rules/rerender-transitions.md",
-              "rules/rerender-use-deferred-value.md",
-              "rules/rerender-use-ref-transient-values.md",
-              "rules/server-after-nonblocking.md",
-              "rules/server-auth-actions.md",
-              "rules/server-cache-lru.md",
-              "rules/server-cache-react.md",
-              "rules/server-dedup-props.md",
-              "rules/server-hoist-static-io.md",
-              "rules/server-parallel-fetching.md",
-              "rules/server-serialization.md"
-            ],
-            "hasBody": true,
-            "name": "vercel-react-best-practices",
-            "path": "react-best-practices/upstream"
-          },
-          {
             "description": "Vercel Sandbox guidance — ephemeral Firecracker microVMs for running untrusted code safely. Supports AI agents, code ge…",
             "files": [
               "overlay.yaml"
@@ -4703,13 +4511,6 @@
             "hasBody": true,
             "name": "vercel-sandbox",
             "path": "vercel-sandbox"
-          },
-          {
-            "description": "Run agent-browser + Chrome inside Vercel Sandbox microVMs for browser automation from any Vercel-deployed app. Use when…",
-            "files": [],
-            "hasBody": true,
-            "name": "vercel-sandbox",
-            "path": "vercel-sandbox/upstream"
           },
           {
             "description": "Configure and troubleshoot Vercel Services for multiple frontends and backends in one project. Use when composing a pol…",
@@ -4740,13 +4541,6 @@
             "hasBody": true,
             "name": "workflow",
             "path": "workflow"
-          },
-          {
-            "description": "Creates durable, resumable workflows using Vercel's Workflow SDK. Use when building workflows that need to survive rest…",
-            "files": [],
-            "hasBody": true,
-            "name": "workflow",
-            "path": "workflow/upstream"
           }
         ]
       },
@@ -4857,149 +4651,6 @@
             "hasBody": true,
             "name": "replatform",
             "path": "wix-replatform"
-          },
-          {
-            "description": "Discovers and documents the source platform schema (entities, fields, relationships) for a migration project. Use when…",
-            "files": [],
-            "hasBody": true,
-            "name": "rp-discovery",
-            "path": "wix-replatform/resources/rp-discovery"
-          },
-          {
-            "description": "Runs the generated extract/import pipeline and records execution results. Use when setup and codegen are complete and t…",
-            "files": [],
-            "hasBody": true,
-            "name": "rp-execute-import",
-            "path": "wix-replatform/resources/rp-execute-import"
-          },
-          {
-            "description": "Verifies and provisions Wix-side setup required before import. Use after codegen when machine-readable setup artifacts…",
-            "files": [
-              "scripts/mint-token.sh"
-            ],
-            "hasBody": true,
-            "name": "rp-execute-setup",
-            "path": "wix-replatform/resources/rp-execute-setup"
-          },
-          {
-            "description": "Generates migration readers, transforms, setup plans, and thin Wix write specs from schema and mapping artifacts. Use w…",
-            "files": [],
-            "hasBody": true,
-            "name": "rp-import-codegen",
-            "path": "wix-replatform/resources/rp-import-codegen"
-          },
-          {
-            "description": "Maps discovered source entities and fields to Wix targets and documents lossiness. Use when creating machine-readable m…",
-            "files": [
-              "lib/mapping-resolve.js",
-              "scripts/resolve-mapping.js",
-              "wix-business-solutions-taxonomy.md"
-            ],
-            "hasBody": true,
-            "name": "rp-mapper",
-            "path": "wix-replatform/resources/rp-mapper"
-          },
-          {
-            "description": "Derives Wix environment prerequisites (apps, collections, schemas) from an approved mapping plan. Use after mapping rev…",
-            "files": [],
-            "hasBody": true,
-            "name": "rp-setup-discovery",
-            "path": "wix-replatform/resources/rp-setup-discovery"
-          },
-          {
-            "description": "CSV file source adapter: parse core, vendor fingerprinting (Shopify, WooCommerce, Magento, BigCommerce), layout inferen…",
-            "files": [
-              "lib/canonical-record.js",
-              "lib/csv-fileset.js",
-              "lib/csv-fingerprint.js",
-              "lib/csv-layout.js",
-              "lib/csv-parse.js",
-              "scripts/csv-discovery.js",
-              "source-schema.example.json",
-              "vendors/bigcommerce.json",
-              "vendors/magento.json",
-              "vendors/shopify.json",
-              "vendors/woocommerce.json"
-            ],
-            "hasBody": true,
-            "name": "rp-source-csv",
-            "path": "wix-replatform/resources/rp-source-csv"
-          },
-          {
-            "description": "WordPress and WooCommerce source adapter: REST capture, auth, pagination, and read contract for codegen. Use when the s…",
-            "files": [
-              "lib/wp-http.js",
-              "lib/wp-route-classifier.js",
-              "scripts/wp-discovery.js",
-              "source-schema.example.json"
-            ],
-            "hasBody": true,
-            "name": "rp-source-wordpress",
-            "path": "wix-replatform/resources/rp-source-wordpress"
-          },
-          {
-            "description": "Wix target adapter with verified write primitives, shared execution runtimes, and contract tests. Use when vendoring Wi…",
-            "files": [
-              "SPEC-product-reviews-and-blog-authorship.md",
-              "domains/README.md",
-              "domains/blog/domain.json",
-              "domains/blog/entities/category.json",
-              "domains/blog/entities/comment.json",
-              "domains/blog/entities/post.json",
-              "domains/blog/entities/tag.json",
-              "domains/cms/domain.json",
-              "domains/cms/entities/collection.json",
-              "domains/cms/entities/data-item.json",
-              "domains/cms/entities/reference.json",
-              "domains/crm/domain.json",
-              "domains/crm/entities/contact.json",
-              "domains/crm/entities/email-subscription.json",
-              "domains/crm/entities/label.json",
-              "domains/ecom/domain.json",
-              "domains/ecom/entities/order-line-item.json",
-              "domains/ecom/entities/order-refund.json",
-              "domains/ecom/entities/order.json",
-              "domains/index.json",
-              "domains/media/domain.json",
-              "domains/media/entities/media-file.json",
-              "domains/media/entities/media-folder.json",
-              "domains/members/domain.json",
-              "domains/members/entities/badge.json",
-              "domains/members/entities/member.json",
-              "domains/schema.json",
-              "domains/stores/domain.json",
-              "domains/stores/entities/category.json",
-              "domains/stores/entities/coupon.json",
-              "domains/stores/entities/inventory-item.json",
-              "domains/stores/entities/product-tag.json",
-              "domains/stores/entities/product.json",
-              "lib/audit-summary.js",
-              "lib/contract-ledger.js",
-              "lib/domain-knowledge.js",
-              "lib/ndjson.js",
-              "lib/stores-verification.js",
-              "lib/wix-build.js",
-              "lib/wix-target-spec.js",
-              "lib/wix-writers.js",
-              "scripts/domain-knowledge-validate.js",
-              "scripts/domain-knowledge.js",
-              "scripts/verify-stores.js"
-            ],
-            "hasBody": true,
-            "name": "rp-target-wix",
-            "path": "wix-replatform/resources/rp-target-wix"
-          },
-          {
-            "description": "Always-active telemetry companion for RePlatform migration runs. Records what happened during a run — halts, errors, fi…",
-            "files": [
-              "lib/bi-sink.js",
-              "lib/telemetry-recorder.js",
-              "scripts/meter-from-audit.js",
-              "scripts/rp-telemetry.js"
-            ],
-            "hasBody": true,
-            "name": "rp-telemetry",
-            "path": "wix-replatform/resources/rp-telemetry"
           },
           {
             "description": "Build and review Wix CLI app extensions — dashboard pages, modals, plugins, menu plugins, custom element widgets, Edito…",
