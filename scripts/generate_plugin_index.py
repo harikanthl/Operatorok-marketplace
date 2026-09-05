@@ -30,8 +30,17 @@ def build():
             manifest = pc.plugin_manifest(plugin_dir)
             row = {}
             kind = pc.source_of(entry)
+            facts = None
             if kind[0] == "url":
                 row["sha"] = kind[2]
+                facts = pc.repo_facts(kind[1])
+                if facts and "error" not in facts:
+                    row["stars"] = facts["stars"]
+            # Who vetted it and why — shown on the website, and the reason a listing exists at all.
+            vetted, by, reason = pc.vet(entry, catalog, facts if kind[0] == "url" else None)
+            row["vetted"] = vetted
+            if by:
+                row["vettedBy"] = by
             if manifest.get("version"):
                 row["version"] = manifest["version"]
             if manifest.get("license"):
@@ -58,10 +67,16 @@ def main():
     if check:
         try:
             with open(OUT, "r", encoding="utf-8") as fh:
-                current = fh.read()
-        except OSError:
-            current = ""
-        if current != text:
+                current = json.load(fh)
+        except (OSError, ValueError):
+            current = {}
+        # Star counts drift daily; a stale check on them would fail every PR opened after lunch.
+        def without_stars(doc):
+            doc = json.loads(json.dumps(doc))
+            for row in (doc.get("plugins") or {}).values():
+                row.pop("stars", None)
+            return doc
+        if without_stars(current) != without_stars(index):
             print("ERROR: %s is stale — run scripts/generate_plugin_index.py and commit it" % os.path.relpath(OUT, pc.ROOT))
             return 1
         print("plugin-index.json is current (%d plugins)" % len(index["plugins"]))

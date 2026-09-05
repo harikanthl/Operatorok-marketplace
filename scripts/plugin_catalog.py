@@ -199,9 +199,13 @@ def components(plugin_dir):
                 continue
             with open(os.path.join(bots_dir, f), "r", encoding="utf-8") as fh:
                 bot = json.load(fh)
+            profile = bot.get("bot") or {}
             rows.append({"id": bot.get("id"), "name": bot.get("name"),
                          "tagline": _shorten(bot.get("tagline")),
-                         "agent": (bot.get("bot") or {}).get("agent"),
+                         "agent": profile.get("agent"),
+                         # The bot's colour, so a browser can draw its face before install.
+                         "color": profile.get("color"),
+                         "helpsWith": _shorten(profile.get("helpsWith"), 160),
                          "skills": bot.get("skillIDs", [])})
         if rows:
             out["bots"] = rows
@@ -215,3 +219,74 @@ def components(plugin_dir):
     if os.path.isfile(os.path.join(plugin_dir, "hooks", "hooks.json")):
         out["hooks"] = True
     return out
+
+
+# ── vetting ─────────────────────────────────────────────────────────────────────────────────────
+#
+# Anyone can open a pull request; not everything can be listed. A remote plugin is vetted when its
+# repo has at least `vetting.minStars` GitHub stars, OR its owner is a trusted org the index names
+# with a reason. A local (first-party) plugin is vetted by code-owner review. Archived repos are
+# refused. Stars are a floor, not a proof of safety — SHA pinning, the install receipt and review are
+# the rest of it — but they keep a two-day-old repo nobody has looked at off the site.
+
+GITHUB_REPO_RE = re.compile(r"^https://github\.com/([^/]+)/([^/]+?)(?:\.git)?/?$")
+
+
+def github_repo(url):
+    m = GITHUB_REPO_RE.match(url or "")
+    return (m.group(1), m.group(2)) if m else None
+
+
+def repo_facts(url, cache={}):
+    """{'stars', 'archived', 'owner', 'ownerType'} from the GitHub API, or None when the repo is not
+    on GitHub or the API is unreachable. Uses GITHUB_TOKEN when set (CI always has one)."""
+    import json as _json
+    import urllib.request
+    repo = github_repo(url)
+    if not repo:
+        return None
+    key = "/".join(repo)
+    if key in cache:
+        return cache[key]
+    headers = {"User-Agent": "operatorok-marketplace", "Accept": "application/vnd.github+json"}
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if token:
+        headers["Authorization"] = "Bearer " + token
+    try:
+        req = urllib.request.Request("https://api.github.com/repos/%s" % key, headers=headers)
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            d = _json.load(resp)
+        facts = {"stars": int(d.get("stargazers_count") or 0), "archived": bool(d.get("archived")),
+                 "owner": (d.get("owner") or {}).get("login") or repo[0],
+                 "ownerType": (d.get("owner") or {}).get("type")}
+    except Exception as exc:  # noqa: BLE001 — any failure is "could not check", reported by the caller
+        facts = {"error": str(exc)}
+    cache[key] = facts
+    return facts
+
+
+def vet(entry, catalog, facts=None):
+    """(vetted: bool, vettedBy: str, reason: str) for one catalog entry."""
+    policy = catalog.get("vetting") or {}
+    min_stars = int(policy.get("minStars") or 0)
+    trusted = policy.get("trustedOwners") or {}
+    kind = source_of(entry)
+    if kind[0] == "local":
+        return True, "first-party", "vendored in this repo; code-owner review"
+    url = kind[1]
+    repo = github_repo(url)
+    if not repo:
+        return False, "", "not a GitHub repo; only GitHub sources can be vetted today"
+    owner = repo[0]
+    if facts is None:
+        facts = repo_facts(url)
+    if facts is None or "error" in facts:
+        return False, "", "could not check the repo (%s)" % ((facts or {}).get("error") or "no facts")
+    if facts.get("archived"):
+        return False, "", "the repo is archived"
+    for name, why in trusted.items():
+        if name.lower() == owner.lower():
+            return True, "trusted-owner", "%s (%s)" % (name, why)
+    if facts.get("stars", 0) >= min_stars:
+        return True, "stars", "%d stars (floor %d)" % (facts["stars"], min_stars)
+    return False, "", "%d stars, below the floor of %d, and %s is not a trusted owner" % (facts.get("stars", 0), min_stars, owner)

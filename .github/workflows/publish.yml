@@ -28,8 +28,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "20"
-      - run: python3 scripts/validate_catalog.py
+      - run: python3 scripts/validate_catalog.py --vet
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: python3 scripts/generate_plugin_index.py --check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish to KV
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

@@ -3,6 +3,32 @@
   "description": "The open catalog of plugins for Operator: skills, MCP servers and bots.",
   "owner": { "name": "Operator", "url": "https://operatorok.com" },
   "repository": "https://github.com/harikanthl/Operatorok-marketplace.git",
+  "vetting": {
+    "_rules": "A remote plugin is listed only if its repo has at least minStars GitHub stars, OR its owner is a trusted org named below with the reason it is trusted. First-party plugins (./plugins) are vetted by code-owner review. Archived repos are refused. CI enforces this on every pull request; the generated index records stars and who vetted each plugin so the website can show it.",
+    "minStars": 50,
+    "trustedOwners": {
+      "vercel": "Vercel's official GitHub org",
+      "getsentry": "Sentry's official GitHub org",
+      "ChromeDevTools": "Google's Chrome DevTools team",
+      "cloudflare": "Cloudflare's official GitHub org",
+      "mongodb": "MongoDB's official GitHub org",
+      "axiomhq": "Axiom's official GitHub org",
+      "neondatabase": "Neon's official GitHub org",
+      "wix": "Wix's official GitHub org",
+      "netlify": "Netlify's official GitHub org",
+      "firecrawl": "Firecrawl's official GitHub org",
+      "figma": "Figma's official GitHub org",
+      "exa-labs": "Exa's official GitHub org",
+      "tavily-ai": "Tavily's official GitHub org",
+      "railwayapp": "Railway's official GitHub org",
+      "stripe": "Stripe's official GitHub org",
+      "tinyfish-io": "TinyFish's official GitHub org",
+      "cursor": "Cursor's official GitHub org",
+      "browser-use": "Browser Use's official GitHub org",
+      "OpenPhone": "Quo (OpenPhone)'s official GitHub org",
+      "NousResearch": "Nous Research's official GitHub org"
+    }
+  },
   "plugins": [
     {
       "name": "operator-research",

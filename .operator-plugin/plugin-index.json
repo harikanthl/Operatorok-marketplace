@@ -257,7 +257,10 @@
       },
       "license": "MIT",
       "sha": "0e98ebaeec76a70c8fda9a7737605800c2f1245d",
-      "version": "1.0.0"
+      "stars": 16,
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "base44": {
       "components": {
@@ -359,7 +362,10 @@
       },
       "license": "MIT",
       "sha": "0d3b72a76e91d920f4a151b68dd224510ca5dc14",
-      "version": "1.0.0-beta.1"
+      "stars": 89,
+      "version": "1.0.0-beta.1",
+      "vetted": true,
+      "vettedBy": "stars"
     },
     "browser-use": {
       "components": {
@@ -382,7 +388,8 @@
       },
       "license": "MIT",
       "sha": "4749bcbfe456e5384b98281a8a66119352197f59",
-      "version": "0.1.0"
+      "version": "0.1.0",
+      "vetted": false
     },
     "chrome-devtools": {
       "components": {
@@ -443,7 +450,10 @@
         ]
       },
       "sha": "45f187b1e3202c9f32ddba913be5d68751c3caa3",
-      "version": "1.8.0"
+      "stars": 51028,
+      "version": "1.8.0",
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "cloudflare": {
       "components": {
@@ -895,7 +905,10 @@
         ]
       },
       "sha": "60147cbb773649eadca89cee92b4e0caf02234b4",
-      "version": "1.0.0"
+      "stars": 2786,
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "exa": {
       "components": {
@@ -933,7 +946,8 @@
       },
       "license": "MIT",
       "sha": "879fae0c814765c43f39ea8f56aae1d44e9d9bc8",
-      "version": "1.1.0"
+      "version": "1.1.0",
+      "vetted": false
     },
     "figma": {
       "components": {
@@ -1135,7 +1149,10 @@
         ]
       },
       "sha": "ae7e5e5f80da20f1dd7445e0c6ae5ac58a5b0bce",
-      "version": "2.2.107"
+      "stars": 1961,
+      "version": "2.2.107",
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "firecrawl": {
       "components": {
@@ -1234,7 +1251,10 @@
       },
       "license": "AGPL-3.0",
       "sha": "7100b62d09a40673fe1688175431b1baff7ed262",
-      "version": "1.2.0"
+      "stars": 9,
+      "version": "1.2.0",
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "hermes-skills": {
       "components": {
@@ -1930,7 +1950,10 @@
           }
         ]
       },
-      "sha": "006b1beb00d9d25230571d14277aca3d70e5e11f"
+      "sha": "006b1beb00d9d25230571d14277aca3d70e5e11f",
+      "stars": 241883,
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "mongodb": {
       "components": {
@@ -2028,7 +2051,10 @@
       },
       "license": "Apache-2.0",
       "sha": "47cc46148f53145eb9b880d2bf1aa89bc9097818",
-      "version": "1.2.1"
+      "stars": 181,
+      "version": "1.2.1",
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "mongodb-atlas": {
       "components": {
@@ -2119,7 +2145,10 @@
       },
       "license": "Apache-2.0",
       "sha": "47cc46148f53145eb9b880d2bf1aa89bc9097818",
-      "version": "1.2.1"
+      "stars": 181,
+      "version": "1.2.1",
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "neon": {
       "components": {
@@ -2189,7 +2218,10 @@
       },
       "license": "Apache-2.0",
       "sha": "2e0da3a1653bcdd227565ac14bb3e9e453a8b854",
-      "version": "1.2.0"
+      "stars": 85,
+      "version": "1.2.0",
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "netlify": {
       "components": {
@@ -2338,7 +2370,10 @@
         ]
       },
       "sha": "32a261b6b2437464aca7e51bf9b48bcac1e2835c",
-      "version": "1.3.0"
+      "stars": 36,
+      "version": "1.3.0",
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "operator-browser": {
       "components": {
@@ -2416,7 +2451,9 @@
         ]
       },
       "license": "MIT",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "first-party"
     },
     "operator-engineering": {
       "components": {
@@ -2438,7 +2475,9 @@
         ]
       },
       "license": "MIT",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "first-party"
     },
     "operator-glasses": {
       "components": {
@@ -2516,7 +2555,9 @@
         ]
       },
       "license": "MIT",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "first-party"
     },
     "operator-mac": {
       "components": {
@@ -2538,13 +2579,17 @@
         ]
       },
       "license": "MIT",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "first-party"
     },
     "operator-mac-bots": {
       "components": {
         "bots": [
           {
             "agent": "claude",
+            "color": "emeraude",
+            "helpsWith": "Puts a model on this Mac that fits it, and points your bots at it: free, private, offline.",
             "id": "local-models",
             "name": "Local Models",
             "skills": [
@@ -2555,6 +2600,8 @@
           },
           {
             "agent": "claude",
+            "color": "bleu",
+            "helpsWith": "Says how old this Mac's last backup is, and starts one when you ask.",
             "id": "mac-backup",
             "name": "Backup",
             "skills": [
@@ -2565,6 +2612,8 @@
           },
           {
             "agent": "claude",
+            "color": "vert",
+            "helpsWith": "Says why this Mac is hot, slow, or crashing, from what macOS reports about itself.",
             "id": "mac-health",
             "name": "Mac Doctor",
             "skills": [
@@ -2575,6 +2624,8 @@
           },
           {
             "agent": "claude",
+            "color": "gris",
+            "helpsWith": "Accounts for every gigabyte on this Mac and reclaims only what you approve by name.",
             "id": "mac-housekeeping",
             "name": "Mac Housekeeping",
             "skills": [
@@ -2585,6 +2636,8 @@
           },
           {
             "agent": "claude",
+            "color": "cyan",
+            "helpsWith": "Finds which part of a slow connection is actually slow: the link, the DNS, the Wi-Fi or a VPN.",
             "id": "mac-network",
             "name": "Network",
             "skills": [
@@ -2595,6 +2648,8 @@
           },
           {
             "agent": "claude",
+            "color": "violet",
+            "helpsWith": "Says whether this Mac's security posture is sound, and names what is off without changing it.",
             "id": "mac-security",
             "name": "Security Check",
             "skills": [
@@ -2605,6 +2660,8 @@
           },
           {
             "agent": "claude",
+            "color": "ambre",
+            "helpsWith": "Says what on this Mac is out of date, and upgrades the one thing you name.",
             "id": "mac-updates",
             "name": "Updates",
             "skills": [
@@ -2616,13 +2673,17 @@
         ]
       },
       "license": "MIT",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "first-party"
     },
     "operator-manufacturing-bots": {
       "components": {
         "bots": [
           {
             "agent": "claude",
+            "color": "dore",
+            "helpsWith": "Feeds, speeds, fixturing, and why the last part came out wrong.",
             "id": "bot-cnc-expert",
             "name": "CNC Expert",
             "skills": [],
@@ -2630,6 +2691,8 @@
           },
           {
             "agent": "claude",
+            "color": "violet",
+            "helpsWith": "First-article checks, in order, with a record that states what it could not see.",
             "id": "bot-qa-inspector",
             "name": "QA Inspector",
             "skills": [],
@@ -2637,6 +2700,8 @@
           },
           {
             "agent": "claude",
+            "color": "citron",
+            "helpsWith": "Turns how you actually do it into an SOP the next person can follow.",
             "id": "bot-sop-builder",
             "name": "SOP Builder",
             "skills": [],
@@ -2645,13 +2710,17 @@
         ]
       },
       "license": "MIT",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "first-party"
     },
     "operator-real-estate-bots": {
       "components": {
         "bots": [
           {
             "agent": "claude",
+            "color": "rose",
+            "helpsWith": "Drafts the next touch for every lead, and says who has gone quiet.",
             "id": "bot-follow-up",
             "name": "Follow-up Agent",
             "skills": [],
@@ -2659,6 +2728,8 @@
           },
           {
             "agent": "claude",
+            "color": "orange",
+            "helpsWith": "Writes and refreshes listings from your notes on a property.",
             "id": "bot-listing-writer",
             "name": "Listing Writer",
             "skills": [],
@@ -2666,6 +2737,8 @@
           },
           {
             "agent": "claude",
+            "color": "cyan",
+            "helpsWith": "Schedules and confirms showings, and says what clashes.",
             "id": "bot-showing-coordinator",
             "name": "Showing Coordinator",
             "skills": [],
@@ -2674,7 +2747,9 @@
         ]
       },
       "license": "MIT",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "first-party"
     },
     "operator-reports": {
       "components": {
@@ -2703,7 +2778,9 @@
         ]
       },
       "license": "MIT",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "first-party"
     },
     "operator-research": {
       "components": {
@@ -2739,7 +2816,9 @@
         ]
       },
       "license": "MIT",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "first-party"
     },
     "operator-speech": {
       "components": {
@@ -2754,13 +2833,17 @@
         ]
       },
       "license": "MIT",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "first-party"
     },
     "operator-team-bots": {
       "components": {
         "bots": [
           {
             "agent": "claude",
+            "color": "bleu",
+            "helpsWith": "Reviews code with a crew — architecture, security, tests, correctness.",
             "id": "bot-review-team",
             "name": "Review Team",
             "skills": [
@@ -2771,6 +2854,8 @@
           },
           {
             "agent": "claude",
+            "color": "emeraude",
+            "helpsWith": "Builds a working app with a crew — scaffold, features, and how to run it.",
             "id": "bot-startup-crew",
             "name": "Startup Crew",
             "skills": [],
@@ -2779,7 +2864,9 @@
         ]
       },
       "license": "MIT",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "first-party"
     },
     "operator-trades": {
       "components": {
@@ -2794,7 +2881,9 @@
         ]
       },
       "license": "MIT",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "first-party"
     },
     "pstack": {
       "components": {
@@ -3206,7 +3295,8 @@
           }
         ]
       },
-      "sha": "93b00b89ef425a9c1bac0d0b317dfc49c930ac99"
+      "sha": "93b00b89ef425a9c1bac0d0b317dfc49c930ac99",
+      "vetted": false
     },
     "quo": {
       "components": {
@@ -3220,7 +3310,8 @@
       },
       "license": "Apache-2.0",
       "sha": "04abd6ef9cd98ffba2105bb7437c13623c26a675",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "vetted": false
     },
     "railway": {
       "components": {
@@ -3269,7 +3360,8 @@
       },
       "license": "MIT",
       "sha": "950acebcef3445f3915ea0709876c3ba9c237a7f",
-      "version": "1.4.0"
+      "version": "1.4.0",
+      "vetted": false
     },
     "sentry": {
       "components": {
@@ -3774,7 +3866,10 @@
       },
       "license": "MIT",
       "sha": "91e0cb6c79730e02bcf8f7dbcb1795e677fe8cc5",
-      "version": "1.4.0"
+      "stars": 1,
+      "version": "1.4.0",
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "stripe": {
       "components": {
@@ -3881,7 +3976,8 @@
       },
       "license": "MIT",
       "sha": "68382523846ea5bfad75ba1ef58dc5db031d0a5a",
-      "version": "0.6.4"
+      "version": "0.6.4",
+      "vetted": false
     },
     "superpowers": {
       "components": {
@@ -4034,7 +4130,10 @@
       },
       "license": "MIT",
       "sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
-      "version": "6.3.0"
+      "stars": 282011,
+      "version": "6.3.0",
+      "vetted": true,
+      "vettedBy": "stars"
     },
     "tavily": {
       "components": {
@@ -4113,7 +4212,8 @@
       },
       "license": "MIT",
       "sha": "0cfd0c2be2df4a2a90c683abaadaf36ef7f2f59d",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "vetted": false
     },
     "tinyfish": {
       "components": {
@@ -4173,7 +4273,8 @@
       },
       "license": "MIT",
       "sha": "89457fba3fa44c7b2227807948628011983ab668",
-      "version": "1.0.0"
+      "version": "1.0.0",
+      "vetted": false
     },
     "vercel": {
       "components": {
@@ -4717,7 +4818,10 @@
       },
       "license": "Apache-2.0",
       "sha": "7b0a6f61b254b0149bb644cadfb588a5c46df0c2",
-      "version": "0.48.2"
+      "stars": 275,
+      "version": "0.48.2",
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "wix": {
       "components": {
@@ -5451,7 +5555,10 @@
       },
       "license": "MIT",
       "sha": "572357b791a91a5138c050e08eb718b150be21cb",
-      "version": "1.18.1"
+      "stars": 29,
+      "version": "1.18.1",
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     }
   },
   "version": 1

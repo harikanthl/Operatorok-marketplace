@@ -114,6 +114,22 @@ git ls-remote https://github.com/my-org/my-plugin.git HEAD
 
 To roll out an update, bump the SHA (remote) or commit the change (local).
 
+## Vetting — what gets listed
+
+Anyone can open a pull request. Not everything can be listed. The index's `vetting` block is the
+rule, and CI enforces it on every pull request:
+
+- A remote plugin is listed when its repo has at least `vetting.minStars` GitHub stars (50), **or**
+  its owner is one of `vetting.trustedOwners` — official vendor orgs a maintainer added with the
+  reason they are trusted. An archived repo is refused either way.
+- A first-party plugin under `plugins/` is vetted by code-owner review.
+- The generated index records each plugin's `stars`, `vetted` and `vettedBy`, and the website shows
+  them. Star counts are refreshed by the generator and ignored by the staleness check.
+
+Stars are a floor, not a proof of safety. SHA pinning, code-owner review, and the install receipt
+(the app shows every skill, tool and bot a plugin brings before anything is kept) are the rest of it.
+To list a young official repo, add its org to `trustedOwners` with a reason in the same pull request.
+
 ## Add or update a plugin
 
 1. Reference your repo with a remote source, or vendor a first-party plugin under `plugins/`.

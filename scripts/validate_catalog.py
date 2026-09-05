@@ -149,6 +149,7 @@ def check_plugin_dir(name, plugin_dir, strict=True):
 
 def main():
     fetch = "--fetch" in sys.argv[1:]
+    vet = "--vet" in sys.argv[1:]
     try:
         catalog = pc.load_marketplace()
     except (pc.CatalogError, ValueError) as exc:
@@ -170,6 +171,13 @@ def main():
         if not name:
             continue
         kind = pc.source_of(entry)[0]
+        # Vetting (the index's `vetting` block): a remote plugin needs the star floor or a trusted
+        # owner; archived repos are refused. Network, so only with --vet (CI always passes it).
+        if vet and kind == "url":
+            ok, by, reason = pc.vet(entry, catalog)
+            if not ok:
+                error("plugins[%s]" % name, "not vetted: %s. Raise the repo's standing, or ask a "
+                                            "maintainer to add its owner to `vetting.trustedOwners` with a reason." % reason)
         if kind == "url" and not fetch:
             continue
         try:

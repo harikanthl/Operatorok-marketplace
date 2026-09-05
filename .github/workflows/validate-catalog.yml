@@ -14,7 +14,13 @@ jobs:
         with:
           python-version: "3.12"
       # Shape of the index and every local plugin; then every remote source fetched at its pinned
-      # SHA and verified to be that SHA. A pin that no longer resolves fails here, loudly.
-      - run: python3 scripts/validate_catalog.py --fetch
+      # SHA and verified to be that SHA; then vetting — the star floor or a trusted owner, never an
+      # archived repo. A pin that no longer resolves, or a plugin nobody has vetted, fails here, loudly.
+      - run: python3 scripts/validate_catalog.py --fetch --vet
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # The component index is generated; a PR that changes a plugin without regenerating it fails.
+      # Star counts drift, so the check compares everything BUT the star fields.
       - run: python3 scripts/generate_plugin_index.py --check
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
