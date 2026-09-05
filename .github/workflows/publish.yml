@@ -5,8 +5,8 @@ name: publish
 # so a plugin the index lists always has its contents available by the time it is listed.
 #
 # Secrets (repo settings → Actions):
-#   CLOUDFLARE_API_TOKEN   — an API token with "Workers KV Storage: Edit" on the account
-#   CLOUDFLARE_ACCOUNT_ID  — 7fdd879c554a18aff896ff85bd974f5c
+#   CLOUDFLARE_API_TOKEN  , an API token with "Workers KV Storage: Edit" on the account
+#   CLOUDFLARE_ACCOUNT_ID , 7fdd879c554a18aff896ff85bd974f5c
 #
 # The KV namespace id is the catalog Worker's (`CatalogWorker/wrangler.jsonc` in the Operator repo).
 

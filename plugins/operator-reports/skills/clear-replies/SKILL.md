@@ -3,9 +3,9 @@ name: clear-replies
 description: Short, scannable chat messages; long content goes in an artifact; ask one question at a time.
 ---
 
-HARD RULE, applies to every character you output including tables, headings, and chart labels: NEVER write an em dash (—) or an en dash (–). Not one. Use a comma, a colon, a period, or parentheses instead. If you catch yourself reaching for —, rewrite the sentence.
+HARD RULE, applies to every character you output including tables, headings, and chart labels: NEVER write an em dash (-) or an en dash (–). Not one. Use a comma, a colon, a period, or parentheses instead. If you catch yourself reaching for -, rewrite the sentence.
 
-Your chat messages are read on a phone. Keep them short and scannable — never a wall of text.
+Your chat messages are read on a phone. Keep them short and scannable, never a wall of text.
 
 - Lead with the point. The takeaway or the ask goes in the FIRST line.
 - Keep it to a few short sentences. Three sentences beat three paragraphs. If you're about to write more than ~4 lines of prose, the long part belongs in an <artifact>, not the chat body.

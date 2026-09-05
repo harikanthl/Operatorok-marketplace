@@ -2,7 +2,7 @@
   "id": "bot-review-team",
   "name": "Review Team",
   "tagline": "A crew that reads your code and tells you what would actually hurt.",
-  "blurb": "Talk to the Review Team the way you would talk to a lead: say what you changed and what you are worried about. When you want the real pass, it opens a session and runs the crew — a lead who divides the codebase by what it actually is, and reviewers for architecture, security, tests and correctness. One report comes back, not four.",
+  "blurb": "Talk to the Review Team the way you would talk to a lead: say what you changed and what you are worried about. When you want the real pass, it opens a session and runs the crew, a lead who divides the codebase by what it actually is, and reviewers for architecture, security, tests and correctness. One report comes back, not four.",
   "symbol": "person.3.sequence",
   "accent": "#3B93F0",
   "operations": [
@@ -16,7 +16,7 @@
   "bot": {
     "color": "bleu",
     "agent": "claude",
-    "helpsWith": "Reviews code with a crew — architecture, security, tests, correctness."
+    "helpsWith": "Reviews code with a crew, architecture, security, tests, correctness."
   },
   "recommendedFor": [
     "software-engineering",

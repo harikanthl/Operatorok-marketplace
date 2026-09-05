@@ -36,7 +36,7 @@ floor, a client on site: the notes get written by nobody. Write them.
    Mark unclear stretches `[unclear 00:04:12]` rather than smoothing them over.
 2. Notes: five to ten bullets of what was discussed, in order.
 3. Decisions: what was agreed, by whom, stated as facts.
-4. Action items: `owner — action — due`, only where the transcript has all three or the owner is the
+4. Action items: `owner, action, due`, only where the transcript has all three or the owner is the
    person themself. Anything with a missing owner goes under "Open".
 5. Follow-up draft: a short message to the other people confirming decisions and actions. A DRAFT,
    never sent by you.

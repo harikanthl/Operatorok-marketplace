@@ -4,11 +4,11 @@
     python3 scripts/stamp_published.py --sha <40 hex> [--out PATH]
 
 A `local` source lives inside this repo, so the only thing an installer needs that the index cannot
-know at authoring time is which commit of THIS repo to fetch — the index cannot pin its own commit
+know at authoring time is which commit of THIS repo to fetch, the index cannot pin its own commit
 before that commit exists. The publish step knows it (`GITHUB_SHA`, or `git rev-parse HEAD` after a
 push), and writes a copy of `marketplace.json` with `publishedSha` set. That copy is what goes to KV;
 the file in the repo never carries the stamp. A client then installs a local plugin from
-`repository` at `publishedSha` with `path` as the subdirectory — the same fetch as any vendor plugin.
+`repository` at `publishedSha` with `path` as the subdirectory, the same fetch as any vendor plugin.
 
 The stamp is only honest for a commit that exists on the remote: run it after the push, never before.
 """

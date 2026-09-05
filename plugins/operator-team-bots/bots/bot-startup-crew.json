@@ -16,7 +16,7 @@
   "bot": {
     "color": "emeraude",
     "agent": "claude",
-    "helpsWith": "Builds a working app with a crew — scaffold, features, and how to run it."
+    "helpsWith": "Builds a working app with a crew, scaffold, features, and how to run it."
   },
   "recommendedFor": [
     "software-engineering"

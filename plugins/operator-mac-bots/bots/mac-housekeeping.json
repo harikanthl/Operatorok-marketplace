@@ -2,7 +2,7 @@
   "id": "mac-housekeeping",
   "name": "Mac Housekeeping",
   "tagline": "Find out what filled your disk, and reclaim it with your approval.",
-  "blurb": "Accounts for every gigabyte on this Mac — caches, build folders, container images, Time Machine snapshots — and says which are regenerable, which are yours, and which macOS is already managing. It deletes nothing on its own: it proposes a list, you approve what goes, and it reports exactly what it freed. Nothing leaves the machine.",
+  "blurb": "Accounts for every gigabyte on this Mac, caches, build folders, container images, Time Machine snapshots, and says which are regenerable, which are yours, and which macOS is already managing. It deletes nothing on its own: it proposes a list, you approve what goes, and it reports exactly what it freed. Nothing leaves the machine.",
   "symbol": "internaldrive",
   "accent": "#64748B",
   "featured": false,

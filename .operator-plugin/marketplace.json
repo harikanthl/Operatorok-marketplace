@@ -159,7 +159,7 @@
     },
     {
       "name": "chrome-devtools",
-      "description": "Chrome DevTools MCP: drive and inspect a live Chrome — performance traces, network, console, automation.",
+      "description": "Chrome DevTools MCP: drive and inspect a live Chrome, performance traces, network, console, automation.",
       "category": "development",
       "source": { "source": "url", "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp.git", "sha": "45f187b1e3202c9f32ddba913be5d68751c3caa3" },
       "homepage": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
@@ -176,7 +176,7 @@
     },
     {
       "name": "superpowers",
-      "description": "obra/superpowers: a core skills library for software work — test-driven development, systematic debugging, collaboration patterns.",
+      "description": "obra/superpowers: a core skills library for software work, test-driven development, systematic debugging, collaboration patterns.",
       "category": "development",
       "source": { "source": "url", "url": "https://github.com/obra/superpowers.git", "sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797" },
       "homepage": "https://github.com/obra/superpowers",
@@ -310,7 +310,7 @@
     },
     {
       "name": "pstack",
-      "description": "pstack (poteto-mode): agent playbooks for writing less, higher-quality code — investigation, design, review, verification.",
+      "description": "pstack (poteto-mode): agent playbooks for writing less, higher-quality code, investigation, design, review, verification.",
       "category": "development",
       "source": { "source": "url", "url": "https://github.com/cursor/plugins.git", "sha": "93b00b89ef425a9c1bac0d0b317dfc49c930ac99", "path": "pstack" },
       "homepage": "https://github.com/cursor/plugins/tree/main/pstack",
@@ -318,7 +318,7 @@
     },
     {
       "name": "browser-use",
-      "description": "Browser Use: give the agent a real browser — your own Chrome with its logins, or an isolated cloud browser — for browsing, forms, scraping and testing.",
+      "description": "Browser Use: give the agent a real browser, your own Chrome with its logins, or an isolated cloud browser, for browsing, forms, scraping and testing.",
       "category": "development",
       "source": { "source": "url", "url": "https://github.com/browser-use/plugins.git", "sha": "4749bcbfe456e5384b98281a8a66119352197f59", "path": "grok" },
       "homepage": "https://browser-use.com",

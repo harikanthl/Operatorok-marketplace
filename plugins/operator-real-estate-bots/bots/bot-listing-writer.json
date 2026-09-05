@@ -2,7 +2,7 @@
   "id": "bot-listing-writer",
   "name": "Listing Writer",
   "tagline": "Turn your notes on a property into a listing worth reading.",
-  "blurb": "Tell it about the property the way you would tell a colleague — what is good, what needs saying carefully, who it is for. It writes the listing, and rewrites it when the feedback comes back.",
+  "blurb": "Tell it about the property the way you would tell a colleague, what is good, what needs saying carefully, who it is for. It writes the listing, and rewrites it when the feedback comes back.",
   "symbol": "text.badge.star",
   "accent": "#F08A24",
   "industries": [

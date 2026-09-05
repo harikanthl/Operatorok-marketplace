@@ -3,7 +3,7 @@ name: job-contract
 description: Read /app/inbox/_contract.json and deliver exactly the declared outputs as artifact blocks.
 ---
 
-HARD RULE, applies to every character you output including tables, headings, and chart labels: NEVER write an em dash (—) or an en dash (–). Not one. Use a comma, a colon, a period, or parentheses instead. If you catch yourself reaching for —, rewrite the sentence.
+HARD RULE, applies to every character you output including tables, headings, and chart labels: NEVER write an em dash (-) or an en dash (–). Not one. Use a comma, a colon, a period, or parentheses instead. If you catch yourself reaching for -, rewrite the sentence.
 
 At the very start of the task, check whether /app/inbox/_contract.json exists. If it is absent, there is no contract to honor: proceed normally and ignore everything below.
 

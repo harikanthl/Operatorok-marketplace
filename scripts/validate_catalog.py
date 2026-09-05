@@ -5,7 +5,7 @@
     python3 scripts/validate_catalog.py --fetch    # also fetch every remote source at its SHA
 
 Exit 1 on any error. Remote sources are only fetched with --fetch (CI does); without it the
-entry's shape is still checked — a missing or short SHA fails either way.
+entry's shape is still checked, a missing or short SHA fails either way.
 """
 
 import json
@@ -91,7 +91,7 @@ def check_skill_dir(loc, dirpath, strict=True):
             rel = os.path.relpath(os.path.join(dp, f), dirpath).replace(os.sep, "/")
             if not pc.SAFE_PATH_RE.match(rel):
                 report(strict)(loc, "helper file path %r is not safe (no hidden files, dot-segments or SKILL.md)"
-                                    "%s" % (rel, "" if strict else " — the installer will skip this file"))
+                                    "%s" % (rel, "" if strict else ", the installer will skip this file"))
 
 
 def check_bot(loc, path):
@@ -213,7 +213,7 @@ def main():
     for e in errors:
         print("ERROR: %s" % e)
     n_remote = sum(1 for p in plugins if isinstance(p, dict) and (p.get("source") or {}).get("source") == "url")
-    print("Validated %d plugin(s), %d remote%s — %s" % (
+    print("Validated %d plugin(s), %d remote%s, %s" % (
         len(plugins), n_remote, " (fetched)" if fetch else " (shape only; --fetch to resolve)",
         "%d error(s)" % len(errors) if errors else "OK"))
     return 1 if errors else 0

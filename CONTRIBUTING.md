@@ -30,13 +30,13 @@ To ship an update later, bump the `sha` and regenerate the index.
 A bot is a JSON file under `bots/` in your plugin: an Operator Solution with a `bot` profile.
 Copy one from `plugins/operator-mac-bots/bots/` and change:
 
-- `id`, `name`, `tagline`, `blurb`, `symbol` — how it appears.
-- `bot.helpsWith` — one or two sentences on what it is for; this is the soul of the teammate.
-- `bot.agent` — `claude`, `hermes`, `pi`, `grok`, or another agent Operator knows.
-- `jobs` — the first job is what installs; a conversational bot's first job uses the `bot-chat@1`
+- `id`, `name`, `tagline`, `blurb`, `symbol`, how it appears.
+- `bot.helpsWith`, one or two sentences on what it is for; this is the soul of the teammate.
+- `bot.agent`, `claude`, `hermes`, `pi`, `grok`, or another agent Operator knows.
+- `jobs`, the first job is what installs; a conversational bot's first job uses the `bot-chat@1`
   contract. Further jobs are the things it can do when asked.
-- `skillIDs` — skills from your plugin or from Operator's catalog, by id.
-- `connectorIDs` — integrations the bot needs (`gmail`, `github`, …), so the app asks for them.
+- `skillIDs`, skills from your plugin or from Operator's catalog, by id.
+- `connectorIDs`, integrations the bot needs (`gmail`, `github`, …), so the app asks for them.
 
 Keep bots honest: a bot that claims a capability it does not have is the one failure people do not
 forgive. Every job should name its contract or its prompt.

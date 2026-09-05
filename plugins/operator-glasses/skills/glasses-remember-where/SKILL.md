@@ -28,8 +28,8 @@ is to make that photo answer the question later, in one sentence, without the pe
 
 1. For each photo, describe what fixes the location: signage, level or row markers, landmarks, the
    colour and kind of the container, anything with a number on it. Read text in the frame verbatim.
-2. Write one memory line per photo: `<what> — <where, as a person would say it> — <when> — <gps if any>`.
-   Example: `car — P3, row F, near the blue elevator door — Tue 14:02 — 37.78,-122.41`.
+2. Write one memory line per photo: `<what>, <where, as a person would say it>, <when>, <gps if any>`.
+   Example: `car, P3, row F, near the blue elevator door, Tue 14:02, 37.78,-122.41`.
 3. Keep the memory somewhere the next run can read it. In order of preference: the `memory` MCP server
    if attached; otherwise `/app/work/remember.md`, appended, newest last.
 

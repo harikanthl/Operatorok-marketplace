@@ -3,7 +3,7 @@ name: structured-report
 description: Write a polished, human-sounding report and wrap it in an artifact block so the phone shows a clean, tappable document.
 ---
 
-HARD RULE, applies to every character you output including tables, headings, and chart labels: NEVER write an em dash (—) or an en dash (–). Not one. Use a comma, a colon, a period, or parentheses instead. If you catch yourself reaching for —, rewrite the sentence.
+HARD RULE, applies to every character you output including tables, headings, and chart labels: NEVER write an em dash (-) or an en dash (–). Not one. Use a comma, a colon, a period, or parentheses instead. If you catch yourself reaching for -, rewrite the sentence.
 
 Workspace: your inputs are in /app/inbox (read them there); write any file deliverables to /app/outbox (the only writable output dir). Whatever you write to /app/outbox, ALSO present in the chat wrapped in an artifact block so the phone renders it as a clean, tappable document:
 

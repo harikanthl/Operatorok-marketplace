@@ -388,8 +388,10 @@
       },
       "license": "MIT",
       "sha": "4749bcbfe456e5384b98281a8a66119352197f59",
+      "stars": 16,
       "version": "0.1.0",
-      "vetted": false
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "chrome-devtools": {
       "components": {
@@ -946,8 +948,10 @@
       },
       "license": "MIT",
       "sha": "879fae0c814765c43f39ea8f56aae1d44e9d9bc8",
+      "stars": 1,
       "version": "1.1.0",
-      "vetted": false
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "figma": {
       "components": {
@@ -1951,7 +1955,7 @@
         ]
       },
       "sha": "006b1beb00d9d25230571d14277aca3d70e5e11f",
-      "stars": 241883,
+      "stars": 241884,
       "vetted": true,
       "vettedBy": "trusted-owner"
     },
@@ -2843,7 +2847,7 @@
           {
             "agent": "claude",
             "color": "bleu",
-            "helpsWith": "Reviews code with a crew — architecture, security, tests, correctness.",
+            "helpsWith": "Reviews code with a crew, architecture, security, tests, correctness.",
             "id": "bot-review-team",
             "name": "Review Team",
             "skills": [
@@ -2855,7 +2859,7 @@
           {
             "agent": "claude",
             "color": "emeraude",
-            "helpsWith": "Builds a working app with a crew — scaffold, features, and how to run it.",
+            "helpsWith": "Builds a working app with a crew, scaffold, features, and how to run it.",
             "id": "bot-startup-crew",
             "name": "Startup Crew",
             "skills": [],
@@ -3296,7 +3300,9 @@
         ]
       },
       "sha": "93b00b89ef425a9c1bac0d0b317dfc49c930ac99",
-      "vetted": false
+      "stars": 6900,
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "quo": {
       "components": {
@@ -3310,8 +3316,10 @@
       },
       "license": "Apache-2.0",
       "sha": "04abd6ef9cd98ffba2105bb7437c13623c26a675",
+      "stars": 0,
       "version": "1.0.0",
-      "vetted": false
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "railway": {
       "components": {
@@ -3360,8 +3368,10 @@
       },
       "license": "MIT",
       "sha": "950acebcef3445f3915ea0709876c3ba9c237a7f",
+      "stars": 320,
       "version": "1.4.0",
-      "vetted": false
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "sentry": {
       "components": {
@@ -3976,8 +3986,10 @@
       },
       "license": "MIT",
       "sha": "68382523846ea5bfad75ba1ef58dc5db031d0a5a",
+      "stars": 1792,
       "version": "0.6.4",
-      "vetted": false
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "superpowers": {
       "components": {
@@ -4212,8 +4224,10 @@
       },
       "license": "MIT",
       "sha": "0cfd0c2be2df4a2a90c683abaadaf36ef7f2f59d",
+      "stars": 2,
       "version": "1.0.0",
-      "vetted": false
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "tinyfish": {
       "components": {
@@ -4273,8 +4287,10 @@
       },
       "license": "MIT",
       "sha": "89457fba3fa44c7b2227807948628011983ab668",
+      "stars": 18,
       "version": "1.0.0",
-      "vetted": false
+      "vetted": true,
+      "vettedBy": "trusted-owner"
     },
     "vercel": {
       "components": {

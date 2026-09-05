@@ -29,7 +29,7 @@ the boxes and arrows as a diagram they can edit, and the "@Sam by Friday" as a t
 2. Diagrams: rewrite as a Mermaid block (`flowchart`, `sequence`, or `mindmap`) so the arrows survive
    as edits, plus a one-line prose reading of what it says.
 3. Tasks: any line with a person, a verb and a date or a checkbox becomes an action item
-   (`owner — action — due`). Unowned ones go under "Open".
+   (`owner, action, due`). Unowned ones go under "Open".
 4. Business cards: one contact record each, fields exactly as printed.
 5. Say which regions were unreadable and what a better photo would fix (angle, glare, distance).
 

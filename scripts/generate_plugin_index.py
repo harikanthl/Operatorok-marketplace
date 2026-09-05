@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate `.operator-plugin/plugin-index.json` — what each plugin provides, so a client can show
+"""Generate `.operator-plugin/plugin-index.json`, what each plugin provides, so a client can show
 a plugin's contents before installing it.
 
     python3 scripts/generate_plugin_index.py           # fetch remotes at their SHA, write the index
@@ -23,6 +23,13 @@ def build():
     catalog = pc.load_marketplace()
     index = {"version": 1, "plugins": {}}
     failures = []
+    warnings = []
+    # What the committed index last knew, for the verdict carry-over when GitHub cannot be asked.
+    try:
+        with open(OUT, "r", encoding="utf-8") as fh:
+            previous = (json.load(fh).get("plugins") or {})
+    except (OSError, ValueError):
+        previous = {}
     for entry in catalog.get("plugins", []):
         name = entry["name"]
         try:
@@ -34,13 +41,22 @@ def build():
             if kind[0] == "url":
                 row["sha"] = kind[2]
                 facts = pc.repo_facts(kind[1])
-                if facts and "error" not in facts:
+            if facts is not None and "error" in facts:
+                # A lookup that FAILED (rate limit, outage) is not a verdict. Keep what the committed
+                # index last knew and say so; the validator is where a failed check fails the build.
+                prev = previous.get(name, {})
+                for key in ("stars", "vetted", "vettedBy"):
+                    if key in prev:
+                        row[key] = prev[key]
+                warnings.append("%s: could not check GitHub (%s); kept the previous verdict" % (name, facts["error"]))
+            else:
+                if facts:
                     row["stars"] = facts["stars"]
-            # Who vetted it and why — shown on the website, and the reason a listing exists at all.
-            vetted, by, reason = pc.vet(entry, catalog, facts if kind[0] == "url" else None)
-            row["vetted"] = vetted
-            if by:
-                row["vettedBy"] = by
+                # Who vetted it and why, shown on the website, and the reason a listing exists at all.
+                vetted, by, reason = pc.vet(entry, catalog, facts)
+                row["vetted"] = vetted
+                if by:
+                    row["vettedBy"] = by
             if manifest.get("version"):
                 row["version"] = manifest["version"]
             if manifest.get("license"):
@@ -49,7 +65,7 @@ def build():
             index["plugins"][name] = row
         except Exception as exc:
             failures.append("%s: %s" % (name, getattr(exc, "stderr", None) or exc))
-    return index, failures
+    return index, failures, warnings
 
 
 def dumps(index):
@@ -58,7 +74,9 @@ def dumps(index):
 
 def main():
     check = "--check" in sys.argv[1:]
-    index, failures = build()
+    index, failures, warnings = build()
+    for w in warnings:
+        print("WARN: %s" % w)
     for f in failures:
         print("ERROR: %s" % f)
     if failures:
@@ -77,7 +95,7 @@ def main():
                 row.pop("stars", None)
             return doc
         if without_stars(current) != without_stars(index):
-            print("ERROR: %s is stale — run scripts/generate_plugin_index.py and commit it" % os.path.relpath(OUT, pc.ROOT))
+            print("ERROR: %s is stale, run scripts/generate_plugin_index.py and commit it" % os.path.relpath(OUT, pc.ROOT))
             return 1
         print("plugin-index.json is current (%d plugins)" % len(index["plugins"]))
         return 0

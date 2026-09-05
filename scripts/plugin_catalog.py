@@ -7,7 +7,7 @@ URL pinned to a full commit SHA.
 
 The same layout as the Claude Code / Grok Build plugin format, so a vendor's existing plugin repo
 installs unchanged. Index folders are read in this order: `.operator-plugin`, `.claude-plugin`,
-`.grok-plugin` — ours first, the others so a foreign repo can be pointed at directly.
+`.grok-plugin`, ours first, the others so a foreign repo can be pointed at directly.
 """
 
 import json
@@ -89,7 +89,7 @@ def resolve_plugin_dir(entry, root=ROOT, fetch=True, cache=CACHE):
         os.makedirs(dest, exist_ok=True)
         _git(["init", "--quiet"], dest)
         _git(["remote", "add", "origin", url], dest)
-        # Fetch exactly the pinned commit — never a branch tip.
+        # Fetch exactly the pinned commit, never a branch tip.
         _git(["fetch", "--quiet", "--depth", "1", "origin", sha], dest)
         _git(["checkout", "--quiet", "--detach", "FETCH_HEAD"], dest)
     head = _git(["rev-parse", "HEAD"], dest)
@@ -153,7 +153,7 @@ def components(plugin_dir):
     for dirpath, dirnames, filenames in os.walk(walk_root):
         dirnames[:] = sorted(d for d in dirnames if not d.startswith(".") and d != "node_modules")
         if "SKILL.md" in filenames:
-            # A skill's own subfolders are its files, never further skills — a nested SKILL.md
+            # A skill's own subfolders are its files, never further skills, a nested SKILL.md
             # (Vercel vendors upstream skills under `skills/flags-sdk/upstream/`) rides along as a
             # reference. The same rule the app's reader applies, so the count shown before install
             # is the count that arrives.
@@ -226,8 +226,8 @@ def components(plugin_dir):
 # Anyone can open a pull request; not everything can be listed. A remote plugin is vetted when its
 # repo has at least `vetting.minStars` GitHub stars, OR its owner is a trusted org the index names
 # with a reason. A local (first-party) plugin is vetted by code-owner review. Archived repos are
-# refused. Stars are a floor, not a proof of safety — SHA pinning, the install receipt and review are
-# the rest of it — but they keep a two-day-old repo nobody has looked at off the site.
+# refused. Stars are a floor, not a proof of safety, SHA pinning, the install receipt and review are
+# the rest of it, but they keep a two-day-old repo nobody has looked at off the site.
 
 GITHUB_REPO_RE = re.compile(r"^https://github\.com/([^/]+)/([^/]+?)(?:\.git)?/?$")
 
@@ -259,7 +259,7 @@ def repo_facts(url, cache={}):
         facts = {"stars": int(d.get("stargazers_count") or 0), "archived": bool(d.get("archived")),
                  "owner": (d.get("owner") or {}).get("login") or repo[0],
                  "ownerType": (d.get("owner") or {}).get("type")}
-    except Exception as exc:  # noqa: BLE001 — any failure is "could not check", reported by the caller
+    except Exception as exc:  # noqa: BLE001, any failure is "could not check", reported by the caller
         facts = {"error": str(exc)}
     cache[key] = facts
     return facts
