@@ -97,6 +97,12 @@ that SHA:
 { "name": "my-plugin", "source": { "source": "local", "path": "./plugins/my-plugin" } }
 ```
 
+A local plugin installs from this repo itself: the index carries a top-level `repository`, and the
+publish step stamps the commit it publishes from as `publishedSha` on the copy it serves
+(`scripts/stamp_published.py`). An installer fetches `repository` at `publishedSha` with `path` as
+the subdirectory, so a local plugin is pinned exactly like a remote one. The file in the repo never
+carries the stamp, because a commit cannot pin itself before it exists.
+
 ### SHA pinning
 
 Every remote source pins a 40-character lowercase commit SHA. Without it, a force-push or a

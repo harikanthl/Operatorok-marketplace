@@ -40,8 +40,12 @@ jobs:
             echo "CLOUDFLARE_API_TOKEN is not set; skipping publish (the index is validated, not served)."
             exit 0
           fi
+          # Stamp the commit being published so plugins that live IN this repo (local sources) can be
+          # fetched at exactly this commit, like any vendor plugin. The stamped copy goes to KV; the
+          # file in the repo never carries it.
+          python3 scripts/stamp_published.py --sha "$GITHUB_SHA" --out .cache/marketplace.published.json
           npx --yes wrangler@4 kv key put --namespace-id="$KV_NAMESPACE_ID" pluginIndex --path=.operator-plugin/plugin-index.json --remote
-          npx --yes wrangler@4 kv key put --namespace-id="$KV_NAMESPACE_ID" marketplace --path=.operator-plugin/marketplace.json --remote
+          npx --yes wrangler@4 kv key put --namespace-id="$KV_NAMESPACE_ID" marketplace --path=.cache/marketplace.published.json --remote
       - name: Verify the edge
         run: |
           sleep 65   # the edge caches for 60 s

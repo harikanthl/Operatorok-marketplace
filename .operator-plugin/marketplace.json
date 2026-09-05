@@ -2,6 +2,7 @@
   "name": "operatorok",
   "description": "The open catalog of plugins for Operator: skills, MCP servers and bots.",
   "owner": { "name": "Operator", "url": "https://operatorok.com" },
+  "repository": "https://github.com/harikanthl/Operatorok-marketplace.git",
   "plugins": [
     {
       "name": "operator-research",
