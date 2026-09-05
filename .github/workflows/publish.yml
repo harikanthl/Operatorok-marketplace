@@ -1,0 +1,48 @@
+name: publish
+
+# On every merge to main: validate, then write the two index documents into the catalog Worker's
+# KV so catalog.operatorok.com/marketplace serves them at the edge. The component index goes first,
+# so a plugin the index lists always has its contents available by the time it is listed.
+#
+# Secrets (repo settings → Actions):
+#   CLOUDFLARE_API_TOKEN   — an API token with "Workers KV Storage: Edit" on the account
+#   CLOUDFLARE_ACCOUNT_ID  — 7fdd879c554a18aff896ff85bd974f5c
+#
+# The KV namespace id is the catalog Worker's (`CatalogWorker/wrangler.jsonc` in the Operator repo).
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency: publish
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: python3 scripts/validate_catalog.py
+      - run: python3 scripts/generate_plugin_index.py --check
+      - name: Publish to KV
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          KV_NAMESPACE_ID: de8c6e9a5f1a4fb58f34cc5eb1d21564
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "CLOUDFLARE_API_TOKEN is not set; skipping publish (the index is validated, not served)."
+            exit 0
+          fi
+          npx --yes wrangler@4 kv key put --namespace-id="$KV_NAMESPACE_ID" pluginIndex --path=.operator-plugin/plugin-index.json --remote
+          npx --yes wrangler@4 kv key put --namespace-id="$KV_NAMESPACE_ID" marketplace --path=.operator-plugin/marketplace.json --remote
+      - name: Verify the edge
+        run: |
+          sleep 65   # the edge caches for 60 s
+          curl -sf https://catalog.operatorok.com/marketplace | python3 -c 'import json,sys; d=json.load(sys.stdin); print("edge serves", len(d["plugins"]), "plugins")'
