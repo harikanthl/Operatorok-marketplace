@@ -1,7 +1,10 @@
 {
   "name": "operatorok",
   "description": "The open catalog of plugins for Operator: skills, MCP servers and bots.",
-  "owner": { "name": "Operator", "url": "https://operatorok.com" },
+  "owner": {
+    "name": "Operator",
+    "url": "https://operatorok.com"
+  },
   "repository": "https://github.com/harikanthl/Operatorok-marketplace.git",
   "vetting": {
     "_rules": "A remote plugin is listed only if its repo has at least minStars GitHub stars, OR its owner is a trusted org named below with the reason it is trusted. First-party plugins (./plugins) are vetted by code-owner review. Archived repos are refused. CI enforces this on every pull request; the generated index records stars and who vetted each plugin so the website can show it.",
@@ -34,97 +37,205 @@
       "name": "operator-research",
       "description": "Research skills from Operator: answer only from the documents with page citations, search the literature through Papers with Code, deliver a paper-style HTML report, and reproduce a paper honestly with a reviewer's verdict.",
       "category": "research",
-      "source": { "source": "local", "path": "./plugins/operator-research" },
+      "source": {
+        "source": "local",
+        "path": "./plugins/operator-research"
+      },
       "homepage": "https://operatorok.com",
-      "keywords": ["research", "citations", "papers", "arxiv", "reproduce"]
+      "keywords": [
+        "research",
+        "citations",
+        "papers",
+        "arxiv",
+        "reproduce"
+      ]
     },
     {
       "name": "operator-reports",
       "description": "Writing skills from Operator: short scannable chat replies, a polished structured report, and a self-contained visual HTML report with stat cards, tables and charts.",
       "category": "writing",
-      "source": { "source": "local", "path": "./plugins/operator-reports" },
+      "source": {
+        "source": "local",
+        "path": "./plugins/operator-reports"
+      },
       "homepage": "https://operatorok.com",
-      "keywords": ["report", "writing", "visual report", "artifact"]
+      "keywords": [
+        "report",
+        "writing",
+        "visual report",
+        "artifact"
+      ]
     },
     {
       "name": "operator-mac",
       "description": "Skills for jobs that look at a Mac without changing it: the four read-only rules every Mac report obeys, and the Apple-silicon tier table for choosing a local Ollama model that fits.",
       "category": "mac",
-      "source": { "source": "local", "path": "./plugins/operator-mac" },
+      "source": {
+        "source": "local",
+        "path": "./plugins/operator-mac"
+      },
       "homepage": "https://operatorok.com",
-      "keywords": ["mac", "macos", "ollama", "local model", "apple silicon"]
+      "keywords": [
+        "mac",
+        "macos",
+        "ollama",
+        "local model",
+        "apple silicon"
+      ]
     },
     {
       "name": "operator-engineering",
       "description": "Engineering skills from Operator: an OWASP-style security review, and honoring a job contract by delivering exactly the declared outputs as artifacts.",
       "category": "development",
-      "source": { "source": "local", "path": "./plugins/operator-engineering" },
+      "source": {
+        "source": "local",
+        "path": "./plugins/operator-engineering"
+      },
       "homepage": "https://operatorok.com",
-      "keywords": ["security review", "owasp", "job contract"]
+      "keywords": [
+        "security review",
+        "owasp",
+        "job contract"
+      ]
     },
     {
       "name": "operator-trades",
       "description": "Talk like the trade: correct electrical terminology, safety-critical care, and code claims grounded in the source rather than guessed.",
       "category": "trades",
-      "source": { "source": "local", "path": "./plugins/operator-trades" },
+      "source": {
+        "source": "local",
+        "path": "./plugins/operator-trades"
+      },
       "homepage": "https://operatorok.com",
-      "keywords": ["electrical", "electrician", "trade", "nec"]
+      "keywords": [
+        "electrical",
+        "electrician",
+        "trade",
+        "nec"
+      ]
     },
     {
       "name": "operator-glasses",
       "description": "Ten skills for smart-glasses capture: remember where you parked, translate what is in view, fridge to recipe, aisle price check, field repair guidance, site inspection reports, meeting notes from the mic, scene description for low vision, receipts to expenses, whiteboard to notes. Each names the optional integrations it works with.",
       "category": "glasses",
-      "source": { "source": "local", "path": "./plugins/operator-glasses" },
+      "source": {
+        "source": "local",
+        "path": "./plugins/operator-glasses"
+      },
       "homepage": "https://operatorok.com/plugin/operator-glasses",
-      "keywords": ["smart glasses", "mentra", "meta glasses", "hands-free", "field", "capture", "vision"]
+      "keywords": [
+        "smart glasses",
+        "mentra",
+        "meta glasses",
+        "hands-free",
+        "field",
+        "capture",
+        "vision"
+      ]
     },
     {
       "name": "operator-browser",
       "description": "Ten skills for browser capture: summarize a page, clip to notes with citations, price watch, prepare a form, fact-check, draft a reply, reviews verdict, recipe clipper, lead to CRM, translate a page. None of them act on the page; the person does.",
       "category": "browser",
-      "source": { "source": "local", "path": "./plugins/operator-browser" },
+      "source": {
+        "source": "local",
+        "path": "./plugins/operator-browser"
+      },
       "homepage": "https://operatorok.com/plugin/operator-browser",
-      "keywords": ["browser", "safari extension", "clip", "summarize", "price tracking", "fact check", "crm"]
+      "keywords": [
+        "browser",
+        "safari extension",
+        "clip",
+        "summarize",
+        "price tracking",
+        "fact check",
+        "crm"
+      ]
     },
     {
       "name": "operator-speech",
       "description": "Transcribe audio and video: the host's speech.stt capability first (on-device on the Mac, or the person's ElevenLabs, Gemini or OpenAI key by policy), WhisperX in the worker when the host cannot. Every transcript says who produced it.",
       "category": "media",
-      "source": { "source": "local", "path": "./plugins/operator-speech" },
+      "source": {
+        "source": "local",
+        "path": "./plugins/operator-speech"
+      },
       "homepage": "https://operatorok.com/plugin/operator-speech",
-      "keywords": ["transcription", "speech to text", "whisper", "whisperx", "diarization", "scribe"]
+      "keywords": [
+        "transcription",
+        "speech to text",
+        "whisper",
+        "whisperx",
+        "diarization",
+        "scribe"
+      ]
     },
     {
       "name": "operator-mac-bots",
       "description": "Seven Mac teammates: Mac Housekeeping, Mac Doctor, Network, Security Check, Updates, Backup and Local Models. Each reads first, never sudo, and reports before it changes anything.",
       "category": "bots",
-      "source": { "source": "local", "path": "./plugins/operator-mac-bots" },
+      "source": {
+        "source": "local",
+        "path": "./plugins/operator-mac-bots"
+      },
       "homepage": "https://operatorok.com",
-      "keywords": ["mac", "housekeeping", "disk", "backup", "updates", "ollama"]
+      "keywords": [
+        "mac",
+        "housekeeping",
+        "disk",
+        "backup",
+        "updates",
+        "ollama"
+      ]
     },
     {
       "name": "operator-team-bots",
       "description": "Two engineering crews: Review Team, which audits a codebase and requests reviews the way a careful reviewer would, and Startup Crew, which builds an app from a brief.",
       "category": "bots",
-      "source": { "source": "local", "path": "./plugins/operator-team-bots" },
+      "source": {
+        "source": "local",
+        "path": "./plugins/operator-team-bots"
+      },
       "homepage": "https://operatorok.com",
-      "keywords": ["code review", "startup", "build app", "squad"]
+      "keywords": [
+        "code review",
+        "startup",
+        "build app",
+        "squad"
+      ]
     },
     {
       "name": "operator-real-estate-bots",
       "description": "Real-estate teammates: Listing Writer drafts listings, Follow-up Agent drafts lead follow-ups that never send without your yes, and Showing Coordinator schedules showings.",
       "category": "bots",
-      "source": { "source": "local", "path": "./plugins/operator-real-estate-bots" },
+      "source": {
+        "source": "local",
+        "path": "./plugins/operator-real-estate-bots"
+      },
       "homepage": "https://operatorok.com",
-      "keywords": ["real estate", "listing", "lead follow-up", "showing"]
+      "keywords": [
+        "real estate",
+        "listing",
+        "lead follow-up",
+        "showing"
+      ]
     },
     {
       "name": "operator-manufacturing-bots",
       "description": "Shop-floor teammates: CNC Expert answers machining questions, SOP Builder turns a process into a standard operating procedure, and QA Inspector writes first-article inspection reports.",
       "category": "bots",
-      "source": { "source": "local", "path": "./plugins/operator-manufacturing-bots" },
+      "source": {
+        "source": "local",
+        "path": "./plugins/operator-manufacturing-bots"
+      },
       "homepage": "https://operatorok.com",
-      "keywords": ["cnc", "machining", "sop", "first article", "quality"]
+      "keywords": [
+        "cnc",
+        "machining",
+        "sop",
+        "first article",
+        "quality"
+      ]
     },
     {
       "name": "hermes-skills",
@@ -137,202 +248,433 @@
         "path": "skills"
       },
       "homepage": "https://github.com/NousResearch/hermes-agent",
-      "keywords": ["hermes", "nous", "skills"]
+      "keywords": [
+        "hermes",
+        "nous",
+        "skills"
+      ]
     },
     {
       "name": "vercel",
       "description": "Vercel: deployments, build status, logs and domains from the agent.",
       "category": "deployment",
-      "source": { "source": "url", "url": "https://github.com/vercel/vercel-plugin.git", "sha": "7b0a6f61b254b0149bb644cadfb588a5c46df0c2" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/vercel/vercel-plugin.git",
+        "sha": "7b0a6f61b254b0149bb644cadfb588a5c46df0c2"
+      },
       "homepage": "https://github.com/vercel/vercel-plugin",
-      "keywords": ["vercel", "deploy"],
-      "domains": ["vercel.com"]
+      "keywords": [
+        "vercel",
+        "deploy"
+      ],
+      "domains": [
+        "vercel.com"
+      ]
     },
     {
       "name": "sentry",
       "description": "Sentry: error reports, stack traces and issue search for debugging production.",
       "category": "monitoring",
-      "source": { "source": "url", "url": "https://github.com/getsentry/plugin-grok.git", "sha": "91e0cb6c79730e02bcf8f7dbcb1795e677fe8cc5" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/getsentry/plugin-grok.git",
+        "sha": "91e0cb6c79730e02bcf8f7dbcb1795e677fe8cc5"
+      },
       "homepage": "https://github.com/getsentry/sentry-for-ai",
-      "keywords": ["sentry", "errors"],
-      "domains": ["sentry.io"]
+      "keywords": [
+        "sentry",
+        "errors"
+      ],
+      "domains": [
+        "sentry.io"
+      ]
     },
     {
       "name": "chrome-devtools",
       "description": "Chrome DevTools MCP: drive and inspect a live Chrome, performance traces, network, console, automation.",
       "category": "development",
-      "source": { "source": "url", "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp.git", "sha": "45f187b1e3202c9f32ddba913be5d68751c3caa3" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp.git",
+        "sha": "45f187b1e3202c9f32ddba913be5d68751c3caa3"
+      },
       "homepage": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
-      "keywords": ["chrome", "devtools", "browser"]
+      "keywords": [
+        "chrome",
+        "devtools",
+        "browser"
+      ]
     },
     {
       "name": "cloudflare",
       "description": "Cloudflare developer platform skills: Workers, Durable Objects, Agents SDK, MCP servers, Wrangler, web performance.",
       "category": "development",
-      "source": { "source": "url", "url": "https://github.com/cloudflare/skills.git", "sha": "60147cbb773649eadca89cee92b4e0caf02234b4" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/cloudflare/skills.git",
+        "sha": "60147cbb773649eadca89cee92b4e0caf02234b4"
+      },
       "homepage": "https://github.com/cloudflare/skills",
-      "keywords": ["cloudflare", "wrangler", "workers"],
-      "domains": ["cloudflare.com"]
+      "keywords": [
+        "cloudflare",
+        "wrangler",
+        "workers"
+      ],
+      "domains": [
+        "cloudflare.com"
+      ]
     },
     {
       "name": "superpowers",
       "description": "obra/superpowers: a core skills library for software work, test-driven development, systematic debugging, collaboration patterns.",
       "category": "development",
-      "source": { "source": "url", "url": "https://github.com/obra/superpowers.git", "sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/obra/superpowers.git",
+        "sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797"
+      },
       "homepage": "https://github.com/obra/superpowers",
-      "keywords": ["superpowers", "tdd", "debugging"]
+      "keywords": [
+        "superpowers",
+        "tdd",
+        "debugging"
+      ]
     },
     {
       "name": "base44",
       "description": "Base44: build and deploy full-stack apps with its CLI and SDK.",
       "category": "development",
-      "source": { "source": "url", "url": "https://github.com/base44/skills.git", "sha": "0d3b72a76e91d920f4a151b68dd224510ca5dc14" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/base44/skills.git",
+        "sha": "0d3b72a76e91d920f4a151b68dd224510ca5dc14"
+      },
       "homepage": "https://docs.base44.com",
-      "keywords": ["base44"],
-      "domains": ["base44.com"]
+      "keywords": [
+        "base44"
+      ],
+      "domains": [
+        "base44.com"
+      ]
     },
     {
       "name": "mongodb",
       "description": "MongoDB self-managed MCP server and skills: explore data, manage collections, optimize queries against any deployment.",
       "category": "database",
-      "source": { "source": "url", "url": "https://github.com/mongodb/agent-skills.git", "sha": "47cc46148f53145eb9b880d2bf1aa89bc9097818", "path": "plugins/mongodb" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/mongodb/agent-skills.git",
+        "sha": "47cc46148f53145eb9b880d2bf1aa89bc9097818",
+        "path": "plugins/mongodb"
+      },
       "homepage": "https://www.mongodb.com/docs/mcp-server/get-started/",
-      "keywords": ["mongodb", "mongo", "mongosh"],
-      "domains": ["mongodb.com"]
+      "keywords": [
+        "mongodb",
+        "mongo",
+        "mongosh"
+      ],
+      "domains": [
+        "mongodb.com"
+      ]
     },
     {
       "name": "mongodb-atlas",
       "description": "MongoDB Atlas managed MCP server and skills: clusters, projects, users, network access, plus the data skills.",
       "category": "database",
-      "source": { "source": "url", "url": "https://github.com/mongodb/agent-skills.git", "sha": "47cc46148f53145eb9b880d2bf1aa89bc9097818", "path": "plugins/mongodb-atlas" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/mongodb/agent-skills.git",
+        "sha": "47cc46148f53145eb9b880d2bf1aa89bc9097818",
+        "path": "plugins/mongodb-atlas"
+      },
       "homepage": "https://www.mongodb.com/docs/mcp-server/get-started/",
-      "keywords": ["mongodb atlas", "atlas"],
-      "domains": ["cloud.mongodb.com"]
+      "keywords": [
+        "mongodb atlas",
+        "atlas"
+      ],
+      "domains": [
+        "cloud.mongodb.com"
+      ]
     },
     {
       "name": "axiom",
       "description": "Axiom observability: APL queries over logs and metrics, SRE investigations, dashboards, monitors and cost analysis.",
       "category": "observability",
-      "source": { "source": "url", "url": "https://github.com/axiomhq/skills.git", "sha": "0e98ebaeec76a70c8fda9a7737605800c2f1245d" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/axiomhq/skills.git",
+        "sha": "0e98ebaeec76a70c8fda9a7737605800c2f1245d"
+      },
       "homepage": "https://github.com/axiomhq/skills",
-      "keywords": ["axiom", "apl", "logs"],
-      "domains": ["axiom.co"]
+      "keywords": [
+        "axiom",
+        "apl",
+        "logs"
+      ],
+      "domains": [
+        "axiom.co"
+      ]
     },
     {
       "name": "neon",
       "description": "Neon serverless Postgres: MCP server plus skills for projects, databases, connection methods and branches.",
       "category": "database",
-      "source": { "source": "url", "url": "https://github.com/neondatabase/agent-skills.git", "sha": "2e0da3a1653bcdd227565ac14bb3e9e453a8b854" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/neondatabase/agent-skills.git",
+        "sha": "2e0da3a1653bcdd227565ac14bb3e9e453a8b854"
+      },
       "homepage": "https://neon.com",
-      "keywords": ["neon", "postgres"],
-      "domains": ["neon.tech", "neon.com"]
+      "keywords": [
+        "neon",
+        "postgres"
+      ],
+      "domains": [
+        "neon.tech",
+        "neon.com"
+      ]
     },
     {
       "name": "wix",
       "description": "Wix: CLI development skills and the Wix MCP server for sites, eCommerce, CMS and dashboard extensions.",
       "category": "development",
-      "source": { "source": "url", "url": "https://github.com/wix/skills.git", "sha": "572357b791a91a5138c050e08eb718b150be21cb" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/wix/skills.git",
+        "sha": "572357b791a91a5138c050e08eb718b150be21cb"
+      },
       "homepage": "https://dev.wix.com/docs/api-reference/articles/ai-tools/about-wix-skills",
-      "keywords": ["wix"],
-      "domains": ["wix.com", "dev.wix.com"]
+      "keywords": [
+        "wix"
+      ],
+      "domains": [
+        "wix.com",
+        "dev.wix.com"
+      ]
     },
     {
       "name": "netlify",
       "description": "Netlify platform skills: functions, Blobs, Postgres, Image CDN, forms, identity, caching, the CLI and deploys.",
       "category": "deployment",
-      "source": { "source": "url", "url": "https://github.com/netlify/context-and-tools.git", "sha": "32a261b6b2437464aca7e51bf9b48bcac1e2835c" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/netlify/context-and-tools.git",
+        "sha": "32a261b6b2437464aca7e51bf9b48bcac1e2835c"
+      },
       "homepage": "https://github.com/netlify/context-and-tools",
-      "keywords": ["netlify", "deploy"],
-      "domains": ["netlify.com"]
+      "keywords": [
+        "netlify",
+        "deploy"
+      ],
+      "domains": [
+        "netlify.com"
+      ]
     },
     {
       "name": "firecrawl",
       "description": "Firecrawl: search, scrape, map, crawl and extract live web data as LLM-ready markdown through its hosted MCP server.",
       "category": "development",
-      "source": { "source": "url", "url": "https://github.com/firecrawl/firecrawl-grok-plugin.git", "sha": "7100b62d09a40673fe1688175431b1baff7ed262" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/firecrawl/firecrawl-grok-plugin.git",
+        "sha": "7100b62d09a40673fe1688175431b1baff7ed262"
+      },
       "homepage": "https://github.com/firecrawl/firecrawl-grok-plugin",
-      "keywords": ["firecrawl", "scrape", "crawl"],
-      "domains": ["firecrawl.dev"]
+      "keywords": [
+        "firecrawl",
+        "scrape",
+        "crawl"
+      ],
+      "domains": [
+        "firecrawl.dev"
+      ]
     },
     {
       "name": "figma",
       "description": "Figma MCP server and skills for design-to-code: read design context, implement designs, Code Connect, write to the canvas.",
       "category": "development",
-      "source": { "source": "url", "url": "https://github.com/figma/mcp-server-guide.git", "sha": "ae7e5e5f80da20f1dd7445e0c6ae5ac58a5b0bce" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/figma/mcp-server-guide.git",
+        "sha": "ae7e5e5f80da20f1dd7445e0c6ae5ac58a5b0bce"
+      },
       "homepage": "https://github.com/figma/mcp-server-guide",
-      "keywords": ["figma", "design"],
-      "domains": ["figma.com"]
+      "keywords": [
+        "figma",
+        "design"
+      ],
+      "domains": [
+        "figma.com"
+      ]
     },
     {
       "name": "exa",
       "description": "Exa web search for agents: real-time search that reads relevant pages and answers with sources.",
       "category": "development",
-      "source": { "source": "url", "url": "https://github.com/exa-labs/exa-grok-plugin.git", "sha": "879fae0c814765c43f39ea8f56aae1d44e9d9bc8" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/exa-labs/exa-grok-plugin.git",
+        "sha": "879fae0c814765c43f39ea8f56aae1d44e9d9bc8"
+      },
       "homepage": "https://exa.ai",
-      "keywords": ["exa", "search"],
-      "domains": ["exa.ai"]
+      "keywords": [
+        "exa",
+        "search"
+      ],
+      "domains": [
+        "exa.ai"
+      ]
     },
     {
       "name": "tavily",
       "description": "Tavily: web search, extraction, crawling and deep research through its hosted MCP server.",
       "category": "development",
-      "source": { "source": "url", "url": "https://github.com/tavily-ai/tavily-grok-plugin.git", "sha": "0cfd0c2be2df4a2a90c683abaadaf36ef7f2f59d" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/tavily-ai/tavily-grok-plugin.git",
+        "sha": "0cfd0c2be2df4a2a90c683abaadaf36ef7f2f59d"
+      },
       "homepage": "https://www.tavily.com",
-      "keywords": ["tavily", "search"],
-      "domains": ["tavily.com"]
+      "keywords": [
+        "tavily",
+        "search"
+      ],
+      "domains": [
+        "tavily.com"
+      ]
     },
     {
       "name": "railway",
       "description": "Railway: projects, services, databases, deploys, environments, variables, domains and metrics.",
       "category": "deployment",
-      "source": { "source": "url", "url": "https://github.com/railwayapp/railway-skills.git", "sha": "950acebcef3445f3915ea0709876c3ba9c237a7f", "path": "plugins/railway" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/railwayapp/railway-skills.git",
+        "sha": "950acebcef3445f3915ea0709876c3ba9c237a7f",
+        "path": "plugins/railway"
+      },
       "homepage": "https://github.com/railwayapp/railway-skills",
-      "keywords": ["railway", "deploy"],
-      "domains": ["railway.com", "railway.app"]
+      "keywords": [
+        "railway",
+        "deploy"
+      ],
+      "domains": [
+        "railway.com",
+        "railway.app"
+      ]
     },
     {
       "name": "stripe",
       "description": "Stripe: best practices, API and SDK upgrade guidance, and the Stripe MCP server.",
       "category": "development",
-      "source": { "source": "url", "url": "https://github.com/stripe/ai.git", "sha": "68382523846ea5bfad75ba1ef58dc5db031d0a5a", "path": "providers/grok/plugin" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/stripe/ai.git",
+        "sha": "68382523846ea5bfad75ba1ef58dc5db031d0a5a",
+        "path": "providers/grok/plugin"
+      },
       "homepage": "https://github.com/stripe/ai",
-      "keywords": ["stripe", "payments"],
-      "domains": ["stripe.com"]
+      "keywords": [
+        "stripe",
+        "payments"
+      ],
+      "domains": [
+        "stripe.com"
+      ]
     },
     {
       "name": "tinyfish",
       "description": "TinyFish: web search, extraction and goal-driven browser automation on live sites through its hosted MCP server.",
       "category": "development",
-      "source": { "source": "url", "url": "https://github.com/tinyfish-io/tinyfish-web-agent-integrations.git", "sha": "89457fba3fa44c7b2227807948628011983ab668", "path": "grok" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/tinyfish-io/tinyfish-web-agent-integrations.git",
+        "sha": "89457fba3fa44c7b2227807948628011983ab668",
+        "path": "grok"
+      },
       "homepage": "https://www.tinyfish.ai",
-      "keywords": ["tinyfish", "browser agent"],
-      "domains": ["tinyfish.ai"]
+      "keywords": [
+        "tinyfish",
+        "browser agent"
+      ],
+      "domains": [
+        "tinyfish.ai"
+      ]
     },
     {
       "name": "pstack",
       "description": "pstack (poteto-mode): agent playbooks for writing less, higher-quality code, investigation, design, review, verification.",
       "category": "development",
-      "source": { "source": "url", "url": "https://github.com/cursor/plugins.git", "sha": "93b00b89ef425a9c1bac0d0b317dfc49c930ac99", "path": "pstack" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/cursor/plugins.git",
+        "sha": "93b00b89ef425a9c1bac0d0b317dfc49c930ac99",
+        "path": "pstack"
+      },
       "homepage": "https://github.com/cursor/plugins/tree/main/pstack",
-      "keywords": ["pstack", "poteto"]
+      "keywords": [
+        "pstack",
+        "poteto"
+      ]
     },
     {
       "name": "browser-use",
       "description": "Browser Use: give the agent a real browser, your own Chrome with its logins, or an isolated cloud browser, for browsing, forms, scraping and testing.",
       "category": "development",
-      "source": { "source": "url", "url": "https://github.com/browser-use/plugins.git", "sha": "4749bcbfe456e5384b98281a8a66119352197f59", "path": "grok" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/browser-use/plugins.git",
+        "sha": "4749bcbfe456e5384b98281a8a66119352197f59",
+        "path": "grok"
+      },
       "homepage": "https://browser-use.com",
-      "keywords": ["browser use", "browser automation"],
-      "domains": ["browser-use.com"]
+      "keywords": [
+        "browser use",
+        "browser automation"
+      ],
+      "domains": [
+        "browser-use.com"
+      ]
     },
     {
       "name": "quo",
       "description": "Quo (OpenPhone) MCP: SMS, contacts, tasks, message history and call transcripts through a hosted OAuth server.",
       "category": "productivity",
-      "source": { "source": "url", "url": "https://github.com/OpenPhone/quo-grok-plugin.git", "sha": "04abd6ef9cd98ffba2105bb7437c13623c26a675" },
+      "source": {
+        "source": "url",
+        "url": "https://github.com/OpenPhone/quo-grok-plugin.git",
+        "sha": "04abd6ef9cd98ffba2105bb7437c13623c26a675"
+      },
       "homepage": "https://github.com/OpenPhone/quo-grok-plugin",
-      "keywords": ["quo", "openphone", "sms"],
-      "domains": ["quo.com"]
+      "keywords": [
+        "quo",
+        "openphone",
+        "sms"
+      ],
+      "domains": [
+        "quo.com"
+      ]
+    },
+    {
+      "name": "operator-ops",
+      "description": "Twelve skills for running an agent setup for a month: cost report, dependency audit, release notes, a read-only PR review, meeting prep, inbox triage, secret rotation, MCP and approval audits, a spam trap, a setup scorecard and a skill curator. Every one reports; nothing sends, merges or deletes without a tap.",
+      "category": "ops",
+      "source": {
+        "source": "local",
+        "path": "./plugins/operator-ops"
+      },
+      "homepage": "https://operatorok.com/plugin/operator-ops",
+      "keywords": [
+        "ops",
+        "security",
+        "cost",
+        "audit",
+        "release notes",
+        "pr review",
+        "inbox",
+        "curator"
+      ]
     }
   ]
 }

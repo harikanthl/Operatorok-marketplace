@@ -388,7 +388,7 @@
       },
       "license": "MIT",
       "sha": "4749bcbfe456e5384b98281a8a66119352197f59",
-      "stars": 16,
+      "stars": 18,
       "version": "0.1.0",
       "vetted": true,
       "vettedBy": "trusted-owner"
@@ -452,7 +452,7 @@
         ]
       },
       "sha": "45f187b1e3202c9f32ddba913be5d68751c3caa3",
-      "stars": 51028,
+      "stars": 51105,
       "version": "1.8.0",
       "vetted": true,
       "vettedBy": "trusted-owner"
@@ -907,7 +907,7 @@
         ]
       },
       "sha": "60147cbb773649eadca89cee92b4e0caf02234b4",
-      "stars": 2786,
+      "stars": 2792,
       "version": "1.0.0",
       "vetted": true,
       "vettedBy": "trusted-owner"
@@ -1153,7 +1153,7 @@
         ]
       },
       "sha": "ae7e5e5f80da20f1dd7445e0c6ae5ac58a5b0bce",
-      "stars": 1961,
+      "stars": 1962,
       "version": "2.2.107",
       "vetted": true,
       "vettedBy": "trusted-owner"
@@ -1955,7 +1955,7 @@
         ]
       },
       "sha": "006b1beb00d9d25230571d14277aca3d70e5e11f",
-      "stars": 241884,
+      "stars": 242194,
       "vetted": true,
       "vettedBy": "trusted-owner"
     },
@@ -2055,7 +2055,7 @@
       },
       "license": "Apache-2.0",
       "sha": "47cc46148f53145eb9b880d2bf1aa89bc9097818",
-      "stars": 181,
+      "stars": 182,
       "version": "1.2.1",
       "vetted": true,
       "vettedBy": "trusted-owner"
@@ -2149,7 +2149,7 @@
       },
       "license": "Apache-2.0",
       "sha": "47cc46148f53145eb9b880d2bf1aa89bc9097818",
-      "stars": 181,
+      "stars": 182,
       "version": "1.2.1",
       "vetted": true,
       "vettedBy": "trusted-owner"
@@ -2710,6 +2710,100 @@
             "name": "SOP Builder",
             "skills": [],
             "tagline": "Say how you do it. Get something the next person can follow."
+          }
+        ]
+      },
+      "license": "MIT",
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "first-party"
+    },
+    "operator-ops": {
+      "components": {
+        "skills": [
+          {
+            "description": "Keep a skill library honest, find duplicates, stale command flags, one-off task notes and overlong descriptions, and pr…",
+            "files": [],
+            "hasBody": true,
+            "name": "curate-skills",
+            "path": "curate-skills"
+          },
+          {
+            "description": "Write a one-page brief for an upcoming meeting from the event, recent threads with the attendees and the notes the pers…",
+            "files": [],
+            "hasBody": true,
+            "name": "dev-meeting-prep",
+            "path": "dev-meeting-prep"
+          },
+          {
+            "description": "Review a pull request from its diff and description with read-only access, and write structured findings the person can…",
+            "files": [],
+            "hasBody": true,
+            "name": "dev-pr-review",
+            "path": "dev-pr-review"
+          },
+          {
+            "description": "Build human-readable release notes from a git range or a milestone, grouped into What's New, Improvements, Fixes, Secur…",
+            "files": [],
+            "hasBody": true,
+            "name": "dev-release-notes",
+            "path": "dev-release-notes"
+          },
+          {
+            "description": "Turn a usage export into a cost report by Solution, model and day, with anomalies flagged by a median rule rather than…",
+            "files": [],
+            "hasBody": true,
+            "name": "ops-cost-report",
+            "path": "ops-cost-report"
+          },
+          {
+            "description": "Audit the lockfiles in the workspace's repositories against public advisories and write a triage list, one finding per…",
+            "files": [],
+            "hasBody": true,
+            "name": "ops-dependency-audit",
+            "path": "ops-dependency-audit"
+          },
+          {
+            "description": "Sweep the inbox for a window and produce a one-screen triage, urgent then decisions then FYI then noise, with a draft r…",
+            "files": [],
+            "hasBody": true,
+            "name": "ops-inbox-triage",
+            "path": "ops-inbox-triage"
+          },
+          {
+            "description": "Score what can be verified from inside a worker's box about how this Operator setup is run, out of fifty, with one fix…",
+            "files": [],
+            "hasBody": true,
+            "name": "score-my-setup",
+            "path": "score-my-setup"
+          },
+          {
+            "description": "Audit every path by which work runs without a tap in this workspace, the risk ladder in policy.md, standing \"always all…",
+            "files": [],
+            "hasBody": true,
+            "name": "sec-audit-approvals",
+            "path": "sec-audit-approvals"
+          },
+          {
+            "description": "Audit every MCP server a workspace or a bot is wired to, with a risk flag per server, what it can reach, what credentia…",
+            "files": [],
+            "hasBody": true,
+            "name": "sec-audit-mcp",
+            "path": "sec-audit-mcp"
+          },
+          {
+            "description": "Rotate the secrets a workspace owns (webhook HMACs, signing secrets) atomically, and hand the person a checklist for th…",
+            "files": [],
+            "hasBody": true,
+            "name": "sec-rotate-secrets",
+            "path": "sec-rotate-secrets"
+          },
+          {
+            "description": "Classify a message from a low-trust source as genuine, spam, an injection attempt, or ambiguous, deterministic rules fi…",
+            "files": [],
+            "hasBody": true,
+            "name": "sec-spam-trap",
+            "path": "sec-spam-trap"
           }
         ]
       },
@@ -3300,7 +3394,7 @@
         ]
       },
       "sha": "93b00b89ef425a9c1bac0d0b317dfc49c930ac99",
-      "stars": 6900,
+      "stars": 6952,
       "vetted": true,
       "vettedBy": "trusted-owner"
     },
@@ -4142,7 +4236,7 @@
       },
       "license": "MIT",
       "sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
-      "stars": 282011,
+      "stars": 282220,
       "version": "6.3.0",
       "vetted": true,
       "vettedBy": "stars"

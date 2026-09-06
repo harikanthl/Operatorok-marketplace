@@ -1,0 +1,9 @@
+{
+  "name": "operator-ops",
+  "version": "1.0.0",
+  "description": "Twelve skills for running an agent setup for a month: cost reports, dependency audits, release notes, a scoped PR review, meeting prep, inbox triage, secret rotation, MCP and approval audits, a spam trap, a setup scorecard and a skill curator. Ten are adapted from OnlyTerp's Hermes Optimization Guide (MIT); every one reports, and nothing sends, merges or deletes without a tap.",
+  "author": { "name": "Operator", "url": "https://operatorok.com" },
+  "homepage": "https://operatorok.com/plugin/operator-ops",
+  "license": "MIT",
+  "keywords": ["ops", "security", "cost", "audit", "release notes", "pr review", "inbox", "curator"]
+}
