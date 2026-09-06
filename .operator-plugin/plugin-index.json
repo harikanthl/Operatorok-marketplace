@@ -452,7 +452,7 @@
         ]
       },
       "sha": "45f187b1e3202c9f32ddba913be5d68751c3caa3",
-      "stars": 51105,
+      "stars": 51135,
       "version": "1.8.0",
       "vetted": true,
       "vettedBy": "trusted-owner"
@@ -1955,7 +1955,7 @@
         ]
       },
       "sha": "006b1beb00d9d25230571d14277aca3d70e5e11f",
-      "stars": 242194,
+      "stars": 242371,
       "vetted": true,
       "vettedBy": "trusted-owner"
     },
@@ -2722,6 +2722,13 @@
       "components": {
         "skills": [
           {
+            "description": "Be the person's chief of staff. Each morning, and whenever asked, say what needs them today and why, what they said the…",
+            "files": [],
+            "hasBody": true,
+            "name": "chief-of-staff",
+            "path": "chief-of-staff"
+          },
+          {
             "description": "Keep a skill library honest, find duplicates, stale command flags, one-off task notes and overlong descriptions, and pr…",
             "files": [],
             "hasBody": true,
@@ -3394,7 +3401,7 @@
         ]
       },
       "sha": "93b00b89ef425a9c1bac0d0b317dfc49c930ac99",
-      "stars": 6952,
+      "stars": 6976,
       "vetted": true,
       "vettedBy": "trusted-owner"
     },
@@ -4236,7 +4243,7 @@
       },
       "license": "MIT",
       "sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
-      "stars": 282220,
+      "stars": 282305,
       "version": "6.3.0",
       "vetted": true,
       "vettedBy": "stars"
