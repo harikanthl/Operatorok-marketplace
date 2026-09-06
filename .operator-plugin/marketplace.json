@@ -135,7 +135,7 @@
     },
     {
       "name": "operator-browser",
-      "description": "Ten skills for browser capture: summarize a page, clip to notes with citations, price watch, prepare a form, fact-check, draft a reply, reviews verdict, recipe clipper, lead to CRM, translate a page. None of them act on the page; the person does.",
+      "description": "Eleven skills for browser capture: summarize a page, clip to notes with citations, price watch, prepare a form, fact-check, draft a reply, reviews verdict, recipe clipper, lead to CRM, translate a page, and a study pack with flashcards Anki and Quizlet import directly. None of them act on the page; the person does.",
       "category": "browser",
       "source": {
         "source": "local",
@@ -149,7 +149,10 @@
         "summarize",
         "price tracking",
         "fact check",
-        "crm"
+        "crm",
+        "study pack",
+        "flashcards",
+        "anki"
       ]
     },
     {
@@ -674,6 +677,25 @@
         "pr review",
         "inbox",
         "curator"
+      ]
+    },
+    {
+      "name": "operator-listen",
+      "description": "Skills that end in something the person listens to on their phone: the audio-brief contract every episode is made of, and article-to-podcast, which turns a paper, a post or an article into a chaptered episode with show notes. The bot writes the words; Operator's phone renders the voices.",
+      "category": "media",
+      "source": {
+        "source": "local",
+        "path": "./plugins/operator-listen"
+      },
+      "homepage": "https://operatorok.com/plugin/operator-listen",
+      "keywords": [
+        "podcast",
+        "listen",
+        "audio",
+        "brief",
+        "paper",
+        "article",
+        "deep dive"
       ]
     }
   ]

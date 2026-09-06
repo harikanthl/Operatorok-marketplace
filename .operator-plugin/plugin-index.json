@@ -1955,7 +1955,7 @@
         ]
       },
       "sha": "006b1beb00d9d25230571d14277aca3d70e5e11f",
-      "stars": 242371,
+      "stars": 242377,
       "vetted": true,
       "vettedBy": "trusted-owner"
     },
@@ -2439,6 +2439,13 @@
             "path": "browser-reviews-verdict"
           },
           {
+            "description": "Turn a captured page, a paper, an article, a chapter or a whole book into a study pack, a summary you can trust, key co…",
+            "files": [],
+            "hasBody": true,
+            "name": "browser-study-pack",
+            "path": "browser-study-pack"
+          },
+          {
             "description": "Summarize a captured web page in the shape the person needs (the gist, the argument, the numbers, the steps), answer th…",
             "files": [],
             "hasBody": true,
@@ -2555,6 +2562,30 @@
             "hasBody": true,
             "name": "glasses-whiteboard-to-notes",
             "path": "glasses-whiteboard-to-notes"
+          }
+        ]
+      },
+      "license": "MIT",
+      "version": "1.0.0",
+      "vetted": true,
+      "vettedBy": "first-party"
+    },
+    "operator-listen": {
+      "components": {
+        "skills": [
+          {
+            "description": "Turn a paper, a blog post, an article or a long page into a finished episode, an mp3 with chapters and a synced transcr…",
+            "files": [],
+            "hasBody": true,
+            "name": "article-to-podcast",
+            "path": "article-to-podcast"
+          },
+          {
+            "description": "Deliver a finished piece of work as a chaptered audio episode the person listens to in Operator. Use when they asked fo…",
+            "files": [],
+            "hasBody": true,
+            "name": "audio-brief",
+            "path": "audio-brief"
           }
         ]
       },
@@ -4243,7 +4274,7 @@
       },
       "license": "MIT",
       "sha": "b36e0829c6d0140e93cfef2ca599b1b07d4a7797",
-      "stars": 282305,
+      "stars": 282310,
       "version": "6.3.0",
       "vetted": true,
       "vettedBy": "stars"

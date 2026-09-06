@@ -1,0 +1,9 @@
+{
+  "name": "operator-listen",
+  "version": "1.0.0",
+  "description": "Skills that end in something the person listens to on their phone: the audio-brief contract every episode is made of, and article-to-podcast, which turns a paper, a post or an article into a chaptered episode with show notes. The bot writes the words; Operator's phone renders the voices.",
+  "author": { "name": "Operator", "url": "https://operatorok.com" },
+  "homepage": "https://operatorok.com/plugin/operator-listen",
+  "license": "MIT",
+  "keywords": ["podcast", "listen", "audio", "brief", "paper", "article", "deep dive"]
+}
